@@ -1,0 +1,23 @@
+*** ./smali/com/android/server/am/ActivityManagerService$2.smali	2014-05-24 22:38:51.596661387 +0800
+--- /home/xiangxin/patchrom/miuiv5/u8500_stock/temp/new_smali/services.jar.out/./smali/com/android/server/am/ActivityManagerService$2.smali	2014-05-24 22:37:26.504664715 +0800
+***************
+*** 164,169 ****
+--- 164,181 ----
+  
+      if-nez v3, :cond_2
+  
++     move-object/from16 v0, p0
++ 
++     iget-object v3, v0, Lcom/android/server/am/ActivityManagerService$2;->this$0:Lcom/android/server/am/ActivityManagerService;
++ 
++     move-object/from16 v0, v22
++ 
++     invoke-static {v3, v0}, Lcom/android/server/am/ActivityManagerService$Injector;->showAppCrashDialog(Lcom/android/server/am/ActivityManagerService;Ljava/util/HashMap;)Z
++ 
++     move-result v3
++ 
++     if-nez v3, :goto_1
++ 
+      new-instance v21, Lcom/android/server/am/AppErrorDialog;
+  
+      move-object/from16 v0, p0

@@ -1,0 +1,21 @@
+*** ./smali/android/nfc/NfcManager.smali	2014-05-24 22:40:02.040658631 +0800
+--- /home/xiangxin/patchrom/miuiv5/u8500_stock/temp/new_smali/framework.jar.out/./smali/android/nfc/NfcManager.smali	2014-05-24 22:38:28.532662289 +0800
+***************
+*** 64,66 ****
+--- 64,79 ----
+  
+      return-object v0
+  .end method
++ 
++ .method public setPollDuration(I)I
++     .locals 1
++     .parameter "pollDurationMs"
++     .annotation build Landroid/annotation/MiuiHook;
++         value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_METHOD:Landroid/annotation/MiuiHook$MiuiHookType;
++     .end annotation
++ 
++     .prologue
++     const/4 v0, 0x0
++ 
++     return v0
++ .end method

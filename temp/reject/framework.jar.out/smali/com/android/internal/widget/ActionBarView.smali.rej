@@ -1,0 +1,27 @@
+*** ActionBarView.smali	2014-05-24 22:40:14.884658129 +0800
+--- ActionBarView.smali	2014-05-24 22:38:39.392661864 +0800
+***************
+*** 5070,5080 ****
+  
+      if-nez v4, :cond_3
+  
+!     new-instance v4, Lcom/android/internal/view/menu/ActionMenuPresenter;
+  
+!     iget-object v5, p0, Lcom/android/internal/widget/ActionBarView;->mContext:Landroid/content/Context;
+  
+!     invoke-direct {v4, v5}, Lcom/android/internal/view/menu/ActionMenuPresenter;-><init>(Landroid/content/Context;)V
+  
+      iput-object v4, p0, Lcom/android/internal/widget/ActionBarView;->mActionMenuPresenter:Lcom/android/internal/view/menu/ActionMenuPresenter;
+  
+--- 5270,5280 ----
+  
+      if-nez v4, :cond_3
+  
+!     iget-object v4, p0, Lcom/android/internal/widget/ActionBarView;->mContext:Landroid/content/Context;
+  
+!     invoke-static {v4}, Lcom/android/internal/widget/ActionBarView$Injector;->createActionMenuPresenter(Landroid/content/Context;)Lcom/android/internal/view/menu/ActionMenuPresenter;
+  
+!     move-result-object v4
+  
+      iput-object v4, p0, Lcom/android/internal/widget/ActionBarView;->mActionMenuPresenter:Lcom/android/internal/view/menu/ActionMenuPresenter;
+  

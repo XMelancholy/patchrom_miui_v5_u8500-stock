@@ -1,0 +1,29 @@
+*** ./smali/android/preference/RingtonePreference.smali	2014-05-24 22:39:15.180660464 +0800
+--- /home/xiangxin/patchrom/miuiv5/u8500_stock/temp/new_smali/framework.jar.out/./smali/android/preference/RingtonePreference.smali	2014-05-24 22:37:49.700663807 +0800
+***************
+*** 258,263 ****
+--- 258,266 ----
+  .method protected onPrepareRingtonePickerIntent(Landroid/content/Intent;)V
+      .locals 2
+      .parameter "ringtonePickerIntent"
++     .annotation build Landroid/annotation/MiuiHook;
++         value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->CHANGE_CODE:Landroid/annotation/MiuiHook$MiuiHookType;
++     .end annotation
+  
+      .prologue
+      const-string v0, "android.intent.extra.ringtone.EXISTING_URI"
+***************
+*** 311,316 ****
+--- 314,325 ----
+  
+      invoke-virtual {p1, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/CharSequence;)Landroid/content/Intent;
+  
++     const-string v0, "com.android.thememanager"
++ 
++     const-string v1, "com.android.thememanager.activity.ThemeTabActivity"
++ 
++     invoke-virtual {p1, v0, v1}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
++ 
+      return-void
+  .end method
+  

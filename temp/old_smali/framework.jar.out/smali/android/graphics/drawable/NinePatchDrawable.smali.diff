@@ -1,0 +1,29 @@
+*** ./smali/android/graphics/drawable/NinePatchDrawable.smali	2014-05-24 22:40:04.920658519 +0800
+--- /home/xiangxin/patchrom/miuiv5/u8500_stock/temp/new_smali/framework.jar.out/./smali/android/graphics/drawable/NinePatchDrawable.smali	2014-05-24 22:38:30.676662205 +0800
+***************
+*** 218,223 ****
+--- 218,226 ----
+  
+  .method private computeBitmapSize()V
+      .locals 5
++     .annotation build Landroid/annotation/MiuiHook;
++         value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->CHANGE_CODE:Landroid/annotation/MiuiHook$MiuiHookType;
++     .end annotation
+  
+      .prologue
+      iget-object v4, p0, Landroid/graphics/drawable/NinePatchDrawable;->mNinePatch:Landroid/graphics/NinePatch;
+***************
+*** 254,259 ****
+--- 257,268 ----
+  
+      iput-object v4, p0, Landroid/graphics/drawable/NinePatchDrawable;->mLayoutInsets:Landroid/graphics/Insets;
+  
++     iget-object v4, p0, Landroid/graphics/drawable/NinePatchDrawable;->mNinePatchState:Landroid/graphics/drawable/NinePatchDrawable$NinePatchState;
++ 
++     iget-object v4, v4, Landroid/graphics/drawable/NinePatchDrawable$NinePatchState;->mPadding:Landroid/graphics/Rect;
++ 
++     iput-object v4, p0, Landroid/graphics/drawable/NinePatchDrawable;->mPadding:Landroid/graphics/Rect;
++ 
+      :goto_0
+      return-void
+  

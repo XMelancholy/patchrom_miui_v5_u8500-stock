@@ -1,0 +1,20 @@
+*** ./smali/android/provider/CallLog.smali	2014-05-24 22:39:46.572659236 +0800
+--- /home/xiangxin/patchrom/miuiv5/u8500_stock/temp/new_smali/framework.jar.out/./smali/android/provider/CallLog.smali	2014-05-24 22:38:17.232662731 +0800
+***************
+*** 6,12 ****
+  # annotations
+  .annotation system Ldalvik/annotation/MemberClasses;
+      value = {
+!         Landroid/provider/CallLog$Calls;
+      }
+  .end annotation
+  
+--- 6,13 ----
+  # annotations
+  .annotation system Ldalvik/annotation/MemberClasses;
+      value = {
+!         Landroid/provider/CallLog$Calls;,
+!         Landroid/provider/CallLog$Injector;
+      }
+  .end annotation
+  

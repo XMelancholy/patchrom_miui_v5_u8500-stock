@@ -1,0 +1,20 @@
+*** ./smali/com/android/internal/telephony/IccPhoneBookInterfaceManagerProxy.smali	2014-05-24 22:40:17.560658024 +0800
+--- /home/xiangxin/patchrom/miuiv5/u8500_stock/temp/new_smali/framework.jar.out/./smali/com/android/internal/telephony/IccPhoneBookInterfaceManagerProxy.smali	2014-05-24 22:38:42.144661756 +0800
+***************
+*** 83,88 ****
+--- 83,97 ----
+      return-object v0
+  .end method
+  
++ .method getIccPhoneBookInterfaceManager()Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;
++     .locals 1
++ 
++     .prologue
++     iget-object v0, p0, Lcom/android/internal/telephony/IccPhoneBookInterfaceManagerProxy;->mIccPhoneBookInterfaceManager:Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;
++ 
++     return-object v0
++ .end method
++ 
+  .method public setmIccPhoneBookInterfaceManager(Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;)V
+      .locals 0
+      .parameter "iccPhoneBookInterfaceManager"

@@ -1,0 +1,19 @@
+*** KeyguardViewManager.smali	2014-05-24 22:38:47.716661538 +0800
+--- KeyguardViewManager.smali	2014-05-24 22:37:23.284664841 +0800
+***************
+*** 618,624 ****
+  
+      iget-object v1, p0, Lcom/android/internal/policy/impl/KeyguardViewManager;->mWindowLayoutParams:Landroid/view/WindowManager$LayoutParams;
+  
+!     const/4 v2, 0x2
+  
+      iput v2, v1, Landroid/view/WindowManager$LayoutParams;->screenOrientation:I
+  
+--- 685,691 ----
+  
+      iget-object v1, p0, Lcom/android/internal/policy/impl/KeyguardViewManager;->mWindowLayoutParams:Landroid/view/WindowManager$LayoutParams;
+  
+!     const/4 v2, 0x4
+  
+      iput v2, v1, Landroid/view/WindowManager$LayoutParams;->screenOrientation:I
+  

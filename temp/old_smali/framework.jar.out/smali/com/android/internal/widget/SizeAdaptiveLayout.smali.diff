@@ -1,0 +1,19 @@
+*** ./smali/com/android/internal/widget/SizeAdaptiveLayout.smali	2014-05-24 22:40:15.092658121 +0800
+--- /home/xiangxin/patchrom/miuiv5/u8500_stock/temp/new_smali/framework.jar.out/./smali/com/android/internal/widget/SizeAdaptiveLayout.smali	2014-05-24 22:38:39.604661856 +0800
+***************
+*** 429,435 ****
+      :cond_1
+      iget-object v3, p0, Lcom/android/internal/widget/SizeAdaptiveLayout;->mModestyPanel:Landroid/view/View;
+  
+!     const/high16 v4, -0x100
+  
+      invoke-virtual {v3, v4}, Landroid/view/View;->setBackgroundColor(I)V
+  
+--- 429,435 ----
+      :cond_1
+      iget-object v3, p0, Lcom/android/internal/widget/SizeAdaptiveLayout;->mModestyPanel:Landroid/view/View;
+  
+!     const/high16 v4, 0x0
+  
+      invoke-virtual {v3, v4}, Landroid/view/View;->setBackgroundColor(I)V
+  

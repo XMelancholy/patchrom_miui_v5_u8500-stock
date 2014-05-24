@@ -1,0 +1,23 @@
+*** ./smali/com/android/internal/policy/impl/PhoneWindowManager$9.smali	2014-05-24 22:38:47.780661536 +0800
+--- /home/xiangxin/patchrom/miuiv5/u8500_stock/temp/new_smali/android.policy.jar.out/./smali/com/android/internal/policy/impl/PhoneWindowManager$9.smali	2014-05-24 22:37:23.344664838 +0800
+***************
+*** 44,52 ****
+  
+      iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$9;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
+  
+!     iget-object v0, v0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mKeyguardMediator:Lcom/android/internal/policy/impl/KeyguardViewMediator;
+  
+!     invoke-virtual {v0, v1, v1}, Lcom/android/internal/policy/impl/KeyguardViewMediator;->keyguardDone(ZZ)V
+  
+      return-void
+  .end method
+--- 44,52 ----
+  
+      iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$9;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
+  
+!     iget-object v0, v0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mKeyguardMediator:Lcom/android/internal/policy/impl/MiuiKeyguardViewMediator;
+  
+!     invoke-virtual {v0, v1, v1}, Lcom/android/internal/policy/impl/MiuiKeyguardViewMediator;->keyguardDone(ZZ)V
+  
+      return-void
+  .end method

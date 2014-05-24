@@ -1,0 +1,13 @@
+*** ./smali/com/android/internal/telephony/AdnRecordCache.smali	2014-05-24 22:40:17.740658017 +0800
+--- /home/xiangxin/patchrom/miuiv5/u8500_stock/temp/new_smali/framework.jar.out/./smali/com/android/internal/telephony/AdnRecordCache.smali	2014-05-24 22:38:42.316661750 +0800
+***************
+*** 1,4 ****
+! .class public final Lcom/android/internal/telephony/AdnRecordCache;
+  .super Landroid/os/Handler;
+  .source "AdnRecordCache.java"
+  
+--- 1,4 ----
+! .class public Lcom/android/internal/telephony/AdnRecordCache;
+  .super Landroid/os/Handler;
+  .source "AdnRecordCache.java"
+  

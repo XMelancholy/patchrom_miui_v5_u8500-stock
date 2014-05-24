@@ -1,0 +1,31 @@
+*** PackageInfoLite.smali	2014-05-24 22:39:42.848659382 +0800
+--- PackageInfoLite.smali	2014-05-24 22:38:13.620662872 +0800
+***************
+*** 46,56 ****
+  .end method
+  
+  .method public constructor <init>()V
+!     .locals 0
+  
+      .prologue
+      invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+  
+      return-void
+  .end method
+  
+--- 48,62 ----
+  .end method
+  
+  .method public constructor <init>()V
+!     .locals 1
+  
+      .prologue
+      invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+  
++     const/4 v0, 0x0
++ 
++     iput v0, p0, Landroid/content/pm/PackageInfoLite;->versionCode:I
++ 
+      return-void
+  .end method
+  

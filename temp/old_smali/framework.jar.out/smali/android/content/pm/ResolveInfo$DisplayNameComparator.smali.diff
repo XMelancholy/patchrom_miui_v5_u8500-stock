@@ -1,0 +1,27 @@
+*** ./smali/android/content/pm/ResolveInfo$DisplayNameComparator.smali	2014-05-24 22:39:42.784659385 +0800
+--- /home/xiangxin/patchrom/miuiv5/u8500_stock/temp/new_smali/framework.jar.out/./smali/android/content/pm/ResolveInfo$DisplayNameComparator.smali	2014-05-24 22:38:13.520662876 +0800
+***************
+*** 90,104 ****
+      :cond_1
+      iget-object v2, p0, Landroid/content/pm/ResolveInfo$DisplayNameComparator;->sCollator:Ljava/text/Collator;
+  
+!     invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+! 
+!     move-result-object v3
+! 
+!     invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+! 
+!     move-result-object v4
+! 
+!     invoke-virtual {v2, v3, v4}, Ljava/text/Collator;->compare(Ljava/lang/String;Ljava/lang/String;)I
+  
+      move-result v2
+  
+--- 90,96 ----
+      :cond_1
+      iget-object v2, p0, Landroid/content/pm/ResolveInfo$DisplayNameComparator;->sCollator:Ljava/text/Collator;
+  
+!     invoke-static {v2, p1, v0, p2, v1}, Landroid/content/pm/ResolveInfo$Injector;->compare(Ljava/text/Collator;Landroid/content/pm/ResolveInfo;Ljava/lang/CharSequence;Landroid/content/pm/ResolveInfo;Ljava/lang/CharSequence;)I
+  
+      move-result v2
+  

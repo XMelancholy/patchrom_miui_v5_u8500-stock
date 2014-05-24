@@ -1,0 +1,13 @@
+*** ./smali/com/android/internal/os/ZygoteInit.smali	2014-05-24 22:40:11.076658278 +0800
+--- /home/xiangxin/patchrom/miuiv5/u8500_stock/temp/new_smali/framework.jar.out/./smali/com/android/internal/os/ZygoteInit.smali	2014-05-24 22:38:35.592662013 +0800
+***************
+*** 419,424 ****
+--- 419,426 ----
+      :try_start_0
+      invoke-static {}, Lcom/android/internal/os/SamplingProfilerIntegration;->start()V
+  
++     invoke-static {}, Lmiui/security/SecurityManager;->init()V
++ 
+      invoke-static {}, Lcom/android/internal/os/ZygoteInit;->registerZygoteSocket()V
+  
+      const/16 v2, 0xbcc

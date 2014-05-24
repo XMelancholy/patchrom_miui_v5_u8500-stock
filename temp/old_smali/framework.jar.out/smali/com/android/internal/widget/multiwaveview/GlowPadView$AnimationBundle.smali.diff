@@ -1,0 +1,50 @@
+*** ./smali/com/android/internal/widget/multiwaveview/GlowPadView$AnimationBundle.smali	2014-05-24 22:40:14.464658145 +0800
+--- /home/xiangxin/patchrom/miuiv5/u8500_stock/temp/new_smali/framework.jar.out/./smali/com/android/internal/widget/multiwaveview/GlowPadView$AnimationBundle.smali	2014-05-24 22:38:38.944661881 +0800
+***************
+*** 4,15 ****
+  
+  
+  # annotations
+  .annotation system Ldalvik/annotation/EnclosingClass;
+      value = Lcom/android/internal/widget/multiwaveview/GlowPadView;
+  .end annotation
+  
+  .annotation system Ldalvik/annotation/InnerClass;
+!     accessFlags = 0x2
+      name = "AnimationBundle"
+  .end annotation
+  
+--- 4,19 ----
+  
+  
+  # annotations
++ .annotation build Landroid/annotation/MiuiHook;
++     value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->CHANGE_ACCESS:Landroid/annotation/MiuiHook$MiuiHookType;
++ .end annotation
++ 
+  .annotation system Ldalvik/annotation/EnclosingClass;
+      value = Lcom/android/internal/widget/multiwaveview/GlowPadView;
+  .end annotation
+  
+  .annotation system Ldalvik/annotation/InnerClass;
+!     accessFlags = 0x0
+      name = "AnimationBundle"
+  .end annotation
+  
+***************
+*** 34,40 ****
+  
+  
+  # direct methods
+! .method private constructor <init>(Lcom/android/internal/widget/multiwaveview/GlowPadView;)V
+      .locals 0
+      .parameter
+  
+--- 38,44 ----
+  
+  
+  # direct methods
+! .method constructor <init>(Lcom/android/internal/widget/multiwaveview/GlowPadView;)V
+      .locals 0
+      .parameter
+  

@@ -1,0 +1,13 @@
+*** ./smali/android/webkit/WebView.smali	2014-05-24 22:39:29.356659910 +0800
+--- /home/xiangxin/patchrom/miuiv5/u8500_stock/temp/new_smali/framework.jar.out/./smali/android/webkit/WebView.smali	2014-05-24 22:38:02.168663320 +0800
+***************
+*** 117,122 ****
+--- 117,124 ----
+  
+      invoke-interface {v0, p4, p5}, Landroid/webkit/WebViewProvider;->init(Ljava/util/Map;Z)V
+  
++     invoke-static {p1}, Lmiui/content/res/ThemeFontChangeHelper;->markWebViewCreated(Landroid/content/Context;)V
++ 
+      return-void
+  .end method
+  

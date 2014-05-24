@@ -1,0 +1,19 @@
+*** LockPatternUtils.smali	2014-05-24 22:40:15.544658103 +0800
+--- LockPatternUtils.smali	2014-05-24 22:38:40.060661838 +0800
+***************
+*** 647,653 ****
+      goto :goto_0
+  .end method
+  
+! .method private setLong(Ljava/lang/String;J)V
+      .locals 4
+      .parameter "secureSettingKey"
+      .parameter "value"
+--- 673,679 ----
+      goto :goto_0
+  .end method
+  
+! .method protected setLong(Ljava/lang/String;J)V
+      .locals 4
+      .parameter "secureSettingKey"
+      .parameter "value"

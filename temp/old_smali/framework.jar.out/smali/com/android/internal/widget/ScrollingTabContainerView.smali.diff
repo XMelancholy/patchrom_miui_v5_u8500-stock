@@ -1,0 +1,47 @@
+*** ./smali/com/android/internal/widget/ScrollingTabContainerView.smali	2014-05-24 22:40:14.928658127 +0800
+--- /home/xiangxin/patchrom/miuiv5/u8500_stock/temp/new_smali/framework.jar.out/./smali/com/android/internal/widget/ScrollingTabContainerView.smali	2014-05-24 22:38:39.444661862 +0800
+***************
+*** 176,181 ****
+--- 176,184 ----
+  
+  .method private createTabLayout()Landroid/widget/LinearLayout;
+      .locals 4
++     .annotation build Landroid/annotation/MiuiHook;
++         value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->CHANGE_CODE:Landroid/annotation/MiuiHook$MiuiHookType;
++     .end annotation
+  
+      .prologue
+      new-instance v0, Landroid/widget/LinearLayout;
+***************
+*** 667,672 ****
+--- 670,699 ----
+      goto :goto_0
+  .end method
+  
++ .method protected getSelectedTabIndex()I
++     .locals 1
++     .annotation build Landroid/annotation/MiuiHook;
++         value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_METHOD:Landroid/annotation/MiuiHook$MiuiHookType;
++     .end annotation
++ 
++     .prologue
++     iget v0, p0, Lcom/android/internal/widget/ScrollingTabContainerView;->mSelectedTabIndex:I
++ 
++     return v0
++ .end method
++ 
++ .method protected getTabLayout()Landroid/widget/LinearLayout;
++     .locals 1
++     .annotation build Landroid/annotation/MiuiHook;
++         value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_METHOD:Landroid/annotation/MiuiHook$MiuiHookType;
++     .end annotation
++ 
++     .prologue
++     iget-object v0, p0, Lcom/android/internal/widget/ScrollingTabContainerView;->mTabLayout:Landroid/widget/LinearLayout;
++ 
++     return-object v0
++ .end method
++ 
+  .method public onAttachedToWindow()V
+      .locals 1
+  
