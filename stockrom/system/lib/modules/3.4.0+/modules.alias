@@ -1,0 +1,6 @@
+# Aliases extracted from modules themselves.
+alias hsi:hsi_char hsi_char
+alias tty-ldisc-20 caif_serial
+alias i2c:st-ftk st_ftk
+alias cw1200_core cw1200_core
+alias cw1200_wlan cw1200_wlan

@@ -1,0 +1,12 @@
+#	Mount	point
+		
+/system	ext4	/dev/block/mmcblk0p2
+/cache	ext4	/dev/block/mmcblk0p4
+/data	ext4	/dev/block/mmcblk0p5
+/misc	emmc	/dev/block/mmcblk0p6
+/sdcard	vfat	/dev/block/mmcblk0p7
+/boot	emmc	/dev/block/mmcblk0p9
+/recovery	emmc	/dev/block/mmcblk0p10
+		
+#/modem	toc	/dev/block/mmcblk0.MODEM
+#/modemfs	ext4	/dev/block/mmcblk0p1

@@ -1,0 +1,3 @@
+post-build=Bambookphone/s1w_u8500/u8500:4.1.1/NS4.1/13417:user/release-keys
+post-timestamp=1384277510
+pre-device=u8500

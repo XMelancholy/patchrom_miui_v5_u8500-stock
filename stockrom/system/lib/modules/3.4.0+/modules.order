@@ -1,0 +1,11 @@
+kernel/drivers/video/b2r2/b2r2_profiler/b2r2_profiler.ko
+kernel/drivers/hsi/clients/hsi_char.ko
+kernel/drivers/hsi/clients/cfhsi.ko
+kernel/drivers/net/caif/caif_serial.ko
+kernel/drivers/net/caif/caif_xshm.ko
+kernel/drivers/net/caif/caif_hsi.ko
+kernel/drivers/input/touchscreen/st-ftk.ko
+kernel/drivers/xshm/xshm.ko
+kernel/drivers/xshm/xshm_chr.ko
+kernel/net/compat-wireless-openmac/drivers/staging/cw1200/cw1200_core.ko
+kernel/net/compat-wireless-openmac/drivers/staging/cw1200/cw1200_wlan.ko
