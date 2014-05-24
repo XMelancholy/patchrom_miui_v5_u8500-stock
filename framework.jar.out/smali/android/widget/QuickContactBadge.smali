@@ -9,7 +9,8 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Landroid/widget/QuickContactBadge$QueryHandler;
+        Landroid/widget/QuickContactBadge$QueryHandler;,
+        Landroid/widget/QuickContactBadge$Injector;
     }
 .end annotation
 
@@ -509,11 +510,14 @@
 .end method
 
 .method protected onDraw(Landroid/graphics/Canvas;)V
-    .locals 5
+    .locals 6
     .parameter "canvas"
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->CHANGE_CODE:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
 
     .prologue
-    const/4 v4, 0x0
+    const/4 v5, 0x0
 
     .line 111
     invoke-super {p0, p1}, Landroid/widget/ImageView;->onDraw(Landroid/graphics/Canvas;)V
@@ -559,11 +563,27 @@
 
     move-result v2
 
+    iget v3, p0, Landroid/widget/QuickContactBadge;->mPaddingLeft:I
+
+    sub-int/2addr v2, v3
+
+    iget v3, p0, Landroid/widget/QuickContactBadge;->mPaddingRight:I
+
+    sub-int/2addr v2, v3
+
     invoke-virtual {p0}, Landroid/widget/QuickContactBadge;->getHeight()I
 
     move-result v3
 
-    invoke-virtual {v1, v4, v4, v2, v3}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
+    iget v0, p0, Landroid/widget/QuickContactBadge;->mPaddingTop:I
+
+    sub-int/2addr v3, v0
+
+    iget v4, p0, Landroid/widget/QuickContactBadge;->mPaddingBottom:I
+
+    sub-int/2addr v3, v4
+
+    invoke-virtual {v1, v5, v5, v2, v3}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
     .line 126
     iget v1, p0, Landroid/view/View;->mPaddingTop:I

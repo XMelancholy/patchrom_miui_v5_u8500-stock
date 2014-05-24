@@ -21,11 +21,14 @@
 
 .field public final verifiers:[Landroid/content/pm/VerifierInfo;
 
+.field public final versionCode:I
+
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;ILjava/util/List;)V
+.method public constructor <init>(Ljava/lang/String;IILjava/util/List;)V
     .locals 1
     .parameter "packageName"
+    .parameter "versionCode"
     .parameter "installLocation"
     .parameter
     .annotation system Ldalvik/annotation/Signature;
@@ -67,5 +70,31 @@
     iput-object v0, p0, Landroid/content/pm/PackageParser$PackageLite;->verifiers:[Landroid/content/pm/VerifierInfo;
 
     .line 213
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;ILjava/util/List;)V
+    .locals 1
+    .parameter "packageName"
+    .parameter "installLocation"
+    .parameter
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            "I",
+            "Ljava/util/List",
+            "<",
+            "Landroid/content/pm/VerifierInfo;",
+            ">;)V"
+        }
+    .end annotation
+
+    .prologue
+    .local p3, verifiers:Ljava/util/List;,"Ljava/util/List<Landroid/content/pm/VerifierInfo;>;"
+    const/4 v0, 0x0
+
+    invoke-direct {p0, p1, v0, p2, p3}, Landroid/content/pm/PackageParser$PackageLite;-><init>(Ljava/lang/String;IILjava/util/List;)V
+
     return-void
 .end method

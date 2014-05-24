@@ -17492,6 +17492,15 @@
     goto :goto_0
 .end method
 
+.method public isHitSelectionHandle()Z
+    .locals 1
+
+    .prologue
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
 .method public isPaused()Z
     .locals 1
 
@@ -17652,6 +17661,15 @@
     const/4 v5, 0x0
 
     goto :goto_0
+.end method
+
+.method public isSelectingText()Z
+    .locals 1
+
+    .prologue
+    iget-boolean v0, p0, Landroid/webkit/WebViewClassic;->mSelectingText:Z
+
+    return v0
 .end method
 
 .method public loadData(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
@@ -23351,7 +23369,7 @@
     goto :goto_0
 .end method
 
-.method sendOurVisibleRect()Landroid/graphics/Rect;
+.method public sendOurVisibleRect()Landroid/graphics/Rect;
     .locals 4
 
     .prologue
@@ -24632,6 +24650,37 @@
     return-void
 .end method
 
+.method public setProxy(Ljava/lang/String;I)V
+    .locals 3
+    .parameter "host"
+    .parameter "port"
+
+    .prologue
+    const/4 v2, 0x0
+
+    const/16 v1, 0xc1
+
+    if-eqz p1, :cond_0
+
+    if-nez p2, :cond_1
+
+    :cond_0
+    invoke-static {v1, v2}, Landroid/webkit/WebViewCore;->sendStaticMessage(ILjava/lang/Object;)V
+
+    :goto_0
+    return-void
+
+    :cond_1
+    new-instance v0, Landroid/net/ProxyProperties;
+
+    invoke-direct {v0, p1, p2, v2}, Landroid/net/ProxyProperties;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    .local v0, pp:Landroid/net/ProxyProperties;
+    invoke-static {v1, v0}, Landroid/webkit/WebViewCore;->sendStaticMessage(ILjava/lang/Object;)V
+
+    goto :goto_0
+.end method
+
 .method public setScrollBarStyle(I)V
     .locals 1
     .parameter "style"
@@ -25574,6 +25623,24 @@
     invoke-virtual {v0}, Landroid/webkit/ZoomManager;->zoomOut()Z
 
     move-result v0
+
+    return v0
+.end method
+
+.method public hideFloatView()V
+    .locals 0
+
+    .prologue
+    return-void
+.end method
+
+.method public checkIfSaveImageFromCacheAvailable(Ljava/lang/String;Ljava/lang/String;)Z
+    .locals 1
+    .parameter "imageUrl"
+    .parameter "path"
+
+    .prologue
+    const/4 v0, 0x0
 
     return v0
 .end method

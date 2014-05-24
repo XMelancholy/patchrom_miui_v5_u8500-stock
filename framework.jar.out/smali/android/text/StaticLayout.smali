@@ -1103,6 +1103,22 @@
     goto/16 :goto_3
 .end method
 
+.method static callIsIdeographic(CZ)Z
+    .locals 1
+    .parameter "c"
+    .parameter "includeNonStarters"
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_METHOD:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
+
+    .prologue
+    invoke-static {p0, p1}, Landroid/text/StaticLayout;->isIdeographic(CZ)Z
+
+    move-result v0
+
+    return v0
+.end method
+
 .method private static final isIdeographic(CZ)Z
     .locals 3
     .parameter "c"
@@ -1251,7 +1267,9 @@
     if-le p0, v2, :cond_0
 
     :cond_a
-    move v0, v1
+    invoke-static {p0, p1}, Landroid/text/StaticLayout$Injector;->isIdeographic(CZ)Z
+
+    move-result v0
 
     .line 598
     goto :goto_0
@@ -2653,6 +2671,20 @@
 
     .line 371
     :cond_d
+    move/from16 v0, v94
+
+    move-object/from16 v1, v27
+
+    move/from16 v2, v106
+
+    move/from16 v3, v120
+
+    move/from16 v4, v29
+
+    invoke-static {v0, v1, v2, v3, v4}, Landroid/text/StaticLayout$Injector;->validateCJKCharAsSpace(C[CIII)C
+
+    move-result v94
+
     const/16 v5, 0x20
 
     move/from16 v0, v94

@@ -7,8 +7,8 @@
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/internal/policy/impl/LockPatternKeyguardView;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/android/internal/policy/impl/LockPatternKeyguardView;->createKeyguardScreenCallback()Lcom/android/internal/policy/impl/KeyguardScreenCallback;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -426,33 +426,27 @@
 
     move-result v2
 
-    .line 382
     .local v2, failedAttemptsBeforeWipe:I
-    const/16 v0, 0xf
+    const/16 v0, 0x8
 
-    .line 385
     .local v0, failedAttemptWarning:I
     if-lez v2, :cond_2
 
     sub-int v3, v2, v1
 
-    .line 389
     .local v3, remainingBeforeWipe:I
     :goto_1
     const/4 v8, 0x5
 
     if-ge v3, v8, :cond_4
 
-    .line 394
     if-lez v3, :cond_3
 
-    .line 395
     iget-object v6, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView$3;->this$0:Lcom/android/internal/policy/impl/LockPatternKeyguardView;
 
     #calls: Lcom/android/internal/policy/impl/LockPatternKeyguardView;->showAlmostAtWipeDialog(II)V
     invoke-static {v6, v1, v3}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->access$1500(Lcom/android/internal/policy/impl/LockPatternKeyguardView;II)V
 
-    .line 419
     :cond_0
     :goto_2
     iget-object v6, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView$3;->this$0:Lcom/android/internal/policy/impl/LockPatternKeyguardView;
@@ -514,7 +508,7 @@
     .line 404
     .local v4, showTimeout:Z
     :goto_3
-    if-eqz v5, :cond_5
+    #if-eqz v5, :cond_5
 
     iget-object v8, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView$3;->this$0:Lcom/android/internal/policy/impl/LockPatternKeyguardView;
 
@@ -556,17 +550,14 @@
     :cond_6
     move v4, v7
 
-    .line 402
     goto :goto_3
 
-    .line 408
     .restart local v4       #showTimeout:Z
     :cond_7
-    const/16 v8, 0x14
+    const/16 v8, 0x9
 
     if-lt v1, v8, :cond_5
 
-    .line 409
     iget-object v8, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView$3;->this$0:Lcom/android/internal/policy/impl/LockPatternKeyguardView;
 
     #getter for: Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
