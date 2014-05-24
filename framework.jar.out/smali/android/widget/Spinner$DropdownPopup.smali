@@ -36,31 +36,24 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 900
     iput-object p1, p0, Landroid/widget/Spinner$DropdownPopup;->this$0:Landroid/widget/Spinner;
 
-    .line 901
     invoke-direct {p0, p2, p3, v1, p4}, Landroid/widget/ListPopupWindow;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
-    .line 903
     invoke-virtual {p0, p1}, Landroid/widget/Spinner$DropdownPopup;->setAnchorView(Landroid/view/View;)V
 
-    .line 904
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Landroid/widget/Spinner$DropdownPopup;->setModal(Z)V
 
-    .line 905
     invoke-virtual {p0, v1}, Landroid/widget/Spinner$DropdownPopup;->setPromptPosition(I)V
 
-    .line 906
     new-instance v0, Landroid/widget/Spinner$DropdownPopup$1;
 
     invoke-direct {v0, p0, p1}, Landroid/widget/Spinner$DropdownPopup$1;-><init>(Landroid/widget/Spinner$DropdownPopup;Landroid/widget/Spinner;)V
 
     invoke-virtual {p0, v0}, Landroid/widget/Spinner$DropdownPopup;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
-    .line 915
     return-void
 .end method
 
@@ -69,7 +62,6 @@
     .parameter "x0"
 
     .prologue
-    .line 896
     iget-object v0, p0, Landroid/widget/Spinner$DropdownPopup;->mAdapter:Landroid/widget/ListAdapter;
 
     return-object v0
@@ -81,7 +73,6 @@
     .locals 1
 
     .prologue
-    .line 924
     iget-object v0, p0, Landroid/widget/Spinner$DropdownPopup;->mHintText:Ljava/lang/CharSequence;
 
     return-object v0
@@ -92,13 +83,10 @@
     .parameter "adapter"
 
     .prologue
-    .line 919
     invoke-super {p0, p1}, Landroid/widget/ListPopupWindow;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 920
     iput-object p1, p0, Landroid/widget/Spinner$DropdownPopup;->mAdapter:Landroid/widget/ListAdapter;
 
-    .line 921
     return-void
 .end method
 
@@ -107,10 +95,8 @@
     .parameter "hintText"
 
     .prologue
-    .line 929
     iput-object p1, p0, Landroid/widget/Spinner$DropdownPopup;->mHintText:Ljava/lang/CharSequence;
 
-    .line 930
     return-void
 .end method
 
@@ -118,20 +104,16 @@
     .locals 10
 
     .prologue
-    .line 934
     invoke-virtual {p0}, Landroid/widget/Spinner$DropdownPopup;->getBackground()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    .line 935
     .local v0, background:Landroid/graphics/drawable/Drawable;
     const/4 v1, 0x0
 
-    .line 936
     .local v1, bgOffset:I
     if-eqz v0, :cond_1
 
-    .line 937
     iget-object v7, p0, Landroid/widget/Spinner$DropdownPopup;->this$0:Landroid/widget/Spinner;
 
     #getter for: Landroid/widget/Spinner;->mTempRect:Landroid/graphics/Rect;
@@ -141,7 +123,6 @@
 
     invoke-virtual {v0, v7}, Landroid/graphics/drawable/Drawable;->getPadding(Landroid/graphics/Rect;)Z
 
-    .line 938
     iget-object v7, p0, Landroid/widget/Spinner$DropdownPopup;->this$0:Landroid/widget/Spinner;
 
     #getter for: Landroid/widget/Spinner;->mTempRect:Landroid/graphics/Rect;
@@ -153,7 +134,6 @@
 
     neg-int v1, v7
 
-    .line 943
     :goto_0
     iget-object v7, p0, Landroid/widget/Spinner$DropdownPopup;->this$0:Landroid/widget/Spinner;
 
@@ -161,7 +141,6 @@
 
     move-result v4
 
-    .line 944
     .local v4, spinnerPaddingLeft:I
     iget-object v7, p0, Landroid/widget/Spinner$DropdownPopup;->this$0:Landroid/widget/Spinner;
 
@@ -171,14 +150,12 @@
 
     if-ne v7, v8, :cond_2
 
-    .line 945
     iget-object v7, p0, Landroid/widget/Spinner$DropdownPopup;->this$0:Landroid/widget/Spinner;
 
     invoke-virtual {v7}, Landroid/widget/Spinner;->getWidth()I
 
     move-result v6
 
-    .line 946
     .local v6, spinnerWidth:I
     iget-object v7, p0, Landroid/widget/Spinner$DropdownPopup;->this$0:Landroid/widget/Spinner;
 
@@ -186,7 +163,6 @@
 
     move-result v5
 
-    .line 948
     .local v5, spinnerPaddingRight:I
     iget-object v8, p0, Landroid/widget/Spinner$DropdownPopup;->this$0:Landroid/widget/Spinner;
 
@@ -202,7 +178,6 @@
 
     move-result v2
 
-    .line 950
     .local v2, contentWidth:I
     iget-object v7, p0, Landroid/widget/Spinner$DropdownPopup;->this$0:Landroid/widget/Spinner;
 
@@ -243,14 +218,11 @@
 
     sub-int v3, v7, v8
 
-    .line 952
     .local v3, contentWidthLimit:I
     if-le v2, v3, :cond_0
 
-    .line 953
     move v2, v3
 
-    .line 956
     :cond_0
     sub-int v7, v6, v4
 
@@ -262,7 +234,6 @@
 
     invoke-virtual {p0, v7}, Landroid/widget/Spinner$DropdownPopup;->setContentWidth(I)V
 
-    .line 965
     .end local v2           #contentWidth:I
     .end local v3           #contentWidthLimit:I
     .end local v5           #spinnerPaddingRight:I
@@ -272,15 +243,12 @@
 
     invoke-virtual {p0, v7}, Landroid/widget/Spinner$DropdownPopup;->setHorizontalOffset(I)V
 
-    .line 966
     const/4 v7, 0x2
 
     invoke-virtual {p0, v7}, Landroid/widget/Spinner$DropdownPopup;->setInputMethodMode(I)V
 
-    .line 967
     invoke-super {p0}, Landroid/widget/ListPopupWindow;->show()V
 
-    .line 968
     invoke-virtual {p0}, Landroid/widget/Spinner$DropdownPopup;->getListView()Landroid/widget/ListView;
 
     move-result-object v7
@@ -289,7 +257,6 @@
 
     invoke-virtual {v7, v8}, Landroid/widget/ListView;->setChoiceMode(I)V
 
-    .line 969
     iget-object v7, p0, Landroid/widget/Spinner$DropdownPopup;->this$0:Landroid/widget/Spinner;
 
     invoke-virtual {v7}, Landroid/widget/Spinner;->getSelectedItemPosition()I
@@ -298,10 +265,8 @@
 
     invoke-virtual {p0, v7}, Landroid/widget/Spinner$DropdownPopup;->setSelection(I)V
 
-    .line 970
     return-void
 
-    .line 940
     .end local v4           #spinnerPaddingLeft:I
     :cond_1
     iget-object v7, p0, Landroid/widget/Spinner$DropdownPopup;->this$0:Landroid/widget/Spinner;
@@ -326,7 +291,6 @@
 
     goto/16 :goto_0
 
-    .line 958
     .restart local v4       #spinnerPaddingLeft:I
     :cond_2
     iget-object v7, p0, Landroid/widget/Spinner$DropdownPopup;->this$0:Landroid/widget/Spinner;
@@ -337,14 +301,12 @@
 
     if-ne v7, v8, :cond_3
 
-    .line 959
     iget-object v7, p0, Landroid/widget/Spinner$DropdownPopup;->this$0:Landroid/widget/Spinner;
 
     invoke-virtual {v7}, Landroid/widget/Spinner;->getWidth()I
 
     move-result v6
 
-    .line 960
     .restart local v6       #spinnerWidth:I
     iget-object v7, p0, Landroid/widget/Spinner$DropdownPopup;->this$0:Landroid/widget/Spinner;
 
@@ -352,7 +314,6 @@
 
     move-result v5
 
-    .line 961
     .restart local v5       #spinnerPaddingRight:I
     sub-int v7, v6, v4
 
@@ -362,7 +323,6 @@
 
     goto :goto_1
 
-    .line 963
     .end local v5           #spinnerPaddingRight:I
     .end local v6           #spinnerWidth:I
     :cond_3

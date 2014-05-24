@@ -41,24 +41,20 @@
     .parameter "context"
 
     .prologue
-    .line 73
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 66
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
     iput-object v1, p0, Lcom/android/internal/telephony/SmsUsageMonitor;->mSmsStamp:Ljava/util/HashMap;
 
-    .line 74
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 76
     .local v0, resolver:Landroid/content/ContentResolver;
-    const-string/jumbo v1, "sms_outgoing_check_max_count"
+    const-string v1, "sms_outgoing_check_max_count"
 
     const/16 v2, 0x1e
 
@@ -68,8 +64,7 @@
 
     iput v1, p0, Lcom/android/internal/telephony/SmsUsageMonitor;->mMaxAllowed:I
 
-    .line 80
-    const-string/jumbo v1, "sms_outgoing_check_interval_ms"
+    const-string v1, "sms_outgoing_check_interval_ms"
 
     const v2, 0x1b7740
 
@@ -79,7 +74,6 @@
 
     iput v1, p0, Lcom/android/internal/telephony/SmsUsageMonitor;->mCheckPeriod:I
 
-    .line 83
     return-void
 .end method
 
@@ -101,7 +95,6 @@
     .local p1, sent:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/Long;>;"
     const/4 v5, 0x0
 
-    .line 134
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v6
@@ -110,7 +103,6 @@
 
     move-result-object v2
 
-    .line 135
     .local v2, ct:Ljava/lang/Long;
     invoke-virtual {v2}, Ljava/lang/Long;->longValue()J
 
@@ -122,7 +114,6 @@
 
     sub-long v0, v6, v8
 
-    .line 139
     .local v0, beginCheckPeriod:J
     :goto_0
     invoke-virtual {p1}, Ljava/util/ArrayList;->isEmpty()Z
@@ -145,12 +136,10 @@
 
     if-gez v4, :cond_0
 
-    .line 140
     invoke-virtual {p1, v5}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
     goto :goto_0
 
-    .line 143
     :cond_0
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
@@ -162,26 +151,21 @@
 
     if-gt v4, v6, :cond_2
 
-    .line 144
     const/4 v3, 0x0
 
     .local v3, i:I
     :goto_1
     if-ge v3, p2, :cond_1
 
-    .line 145
     invoke-virtual {p1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 144
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_1
 
-    .line 147
     :cond_1
     const/4 v4, 0x1
 
-    .line 149
     .end local v3           #i:I
     :goto_2
     return v4
@@ -197,12 +181,10 @@
     .parameter "msg"
 
     .prologue
-    .line 153
     const-string v0, "SmsUsageMonitor"
 
     invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 154
     return-void
 .end method
 
@@ -210,7 +192,6 @@
     .locals 9
 
     .prologue
-    .line 119
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v5
@@ -221,13 +202,11 @@
 
     sub-long v0, v5, v7
 
-    .line 121
     .local v0, beginCheckPeriod:J
     iget-object v6, p0, Lcom/android/internal/telephony/SmsUsageMonitor;->mSmsStamp:Ljava/util/HashMap;
 
     monitor-enter v6
 
-    .line 122
     :try_start_0
     iget-object v5, p0, Lcom/android/internal/telephony/SmsUsageMonitor;->mSmsStamp:Ljava/util/HashMap;
 
@@ -239,7 +218,6 @@
 
     move-result-object v3
 
-    .line 123
     .local v3, iter:Ljava/util/Iterator;,"Ljava/util/Iterator<Ljava/util/Map$Entry<Ljava/lang/String;Ljava/util/ArrayList<Ljava/lang/Long;>;>;>;"
     :cond_0
     :goto_0
@@ -249,14 +227,12 @@
 
     if-eqz v5, :cond_2
 
-    .line 124
     invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Ljava/util/Map$Entry;
 
-    .line 125
     .local v2, entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Ljava/util/ArrayList<Ljava/lang/Long;>;>;"
     invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -264,7 +240,6 @@
 
     check-cast v4, Ljava/util/ArrayList;
 
-    .line 126
     .local v4, oldList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/Long;>;"
     invoke-virtual {v4}, Ljava/util/ArrayList;->isEmpty()Z
 
@@ -292,13 +267,11 @@
 
     if-gez v5, :cond_0
 
-    .line 127
     :cond_1
     invoke-interface {v3}, Ljava/util/Iterator;->remove()V
 
     goto :goto_0
 
-    .line 130
     .end local v2           #entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Ljava/util/ArrayList<Ljava/lang/Long;>;>;"
     .end local v3           #iter:Ljava/util/Iterator;,"Ljava/util/Iterator<Ljava/util/Map$Entry<Ljava/lang/String;Ljava/util/ArrayList<Ljava/lang/Long;>;>;>;"
     .end local v4           #oldList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/Long;>;"
@@ -318,7 +291,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 131
     return-void
 .end method
 
@@ -361,23 +333,19 @@
 
     check-cast v0, Ljava/util/ArrayList;
 
-    .line 105
     .local v0, sentList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/Long;>;"
     if-nez v0, :cond_0
 
-    .line 106
     new-instance v0, Ljava/util/ArrayList;
 
     .end local v0           #sentList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/Long;>;"
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 107
     .restart local v0       #sentList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/Long;>;"
     iget-object v1, p0, Lcom/android/internal/telephony/SmsUsageMonitor;->mSmsStamp:Ljava/util/HashMap;
 
     invoke-virtual {v1, p1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 110
     :cond_0
     invoke-direct {p0, v0, p2}, Lcom/android/internal/telephony/SmsUsageMonitor;->isUnderLimit(Ljava/util/ArrayList;I)Z
 
@@ -387,7 +355,6 @@
 
     return v1
 
-    .line 111
     .end local v0           #sentList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/Long;>;"
     :catchall_0
     move-exception v1
@@ -403,11 +370,9 @@
     .locals 1
 
     .prologue
-    .line 87
     iget-object v0, p0, Lcom/android/internal/telephony/SmsUsageMonitor;->mSmsStamp:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
 
-    .line 88
     return-void
 .end method

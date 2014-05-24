@@ -31,7 +31,6 @@
     .parameter
 
     .prologue
-    .line 38
     iput-object p1, p0, Lcom/android/server/OtaUpdateReceiver$1;->this$0:Lcom/android/server/OtaUpdateReceiver;
 
     iput-object p3, p0, Lcom/android/server/OtaUpdateReceiver$1;->val$intent:Landroid/content/Intent;
@@ -49,7 +48,6 @@
     .locals 5
 
     .prologue
-    .line 42
     :try_start_0
     iget-object v3, p0, Lcom/android/server/OtaUpdateReceiver$1;->val$intent:Landroid/content/Intent;
 
@@ -59,19 +57,16 @@
 
     move-result-object v2
 
-    .line 43
     .local v2, path:Ljava/lang/String;
     new-instance v1, Ljava/io/File;
 
     invoke-direct {v1, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 44
     .local v1, packageFile:Ljava/io/File;
     iget-object v3, p0, Lcom/android/server/OtaUpdateReceiver$1;->val$context:Landroid/content/Context;
 
     invoke-static {v3, v1}, Landroid/os/RecoverySystem;->installPackage(Landroid/content/Context;Ljava/io/File;)V
 
-    .line 45
     const-string v3, "OtaUpdateReceiver"
 
     const-string v4, "Still running recovery update!"
@@ -80,17 +75,14 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 49
     .end local v1           #packageFile:Ljava/io/File;
     .end local v2           #path:Ljava/lang/String;
     :goto_0
     return-void
 
-    .line 46
     :catch_0
     move-exception v0
 
-    .line 47
     .local v0, e:Ljava/io/IOException;
     const-string v3, "OtaUpdateReceiver"
 

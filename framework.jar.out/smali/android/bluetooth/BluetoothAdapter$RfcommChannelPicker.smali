@@ -51,7 +51,6 @@
     .locals 1
 
     .prologue
-    .line 837
     const/4 v0, 0x6
 
     new-array v0, v0, [I
@@ -80,28 +79,23 @@
     .parameter "uuid"
 
     .prologue
-    .line 852
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 853
     const-class v6, Landroid/bluetooth/BluetoothAdapter$RfcommChannelPicker;
 
     monitor-enter v6
 
-    .line 854
     :try_start_0
     sget-object v5, Landroid/bluetooth/BluetoothAdapter$RfcommChannelPicker;->sChannels:Ljava/util/LinkedList;
 
     if-nez v5, :cond_2
 
-    .line 856
     new-instance v5, Ljava/util/LinkedList;
 
     invoke-direct {v5}, Ljava/util/LinkedList;-><init>()V
 
     sput-object v5, Landroid/bluetooth/BluetoothAdapter$RfcommChannelPicker;->sChannels:Ljava/util/LinkedList;
 
-    .line 857
     const/4 v1, 0x1
 
     .local v1, i:I
@@ -110,7 +104,6 @@
 
     if-gt v1, v5, :cond_0
 
-    .line 858
     sget-object v5, Landroid/bluetooth/BluetoothAdapter$RfcommChannelPicker;->sChannels:Ljava/util/LinkedList;
 
     new-instance v7, Ljava/lang/Integer;
@@ -119,12 +112,10 @@
 
     invoke-virtual {v5, v7}, Ljava/util/LinkedList;->addLast(Ljava/lang/Object;)V
 
-    .line 857
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 860
     :cond_0
     sget-object v0, Landroid/bluetooth/BluetoothAdapter$RfcommChannelPicker;->RESERVED_RFCOMM_CHANNELS:[I
 
@@ -140,7 +131,6 @@
 
     aget v4, v0, v2
 
-    .line 861
     .local v4, reserved:I
     sget-object v5, Landroid/bluetooth/BluetoothAdapter$RfcommChannelPicker;->sChannels:Ljava/util/LinkedList;
 
@@ -150,12 +140,10 @@
 
     invoke-virtual {v5, v7}, Ljava/util/LinkedList;->remove(Ljava/lang/Object;)Z
 
-    .line 860
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 863
     .end local v4           #reserved:I
     :cond_1
     new-instance v5, Ljava/util/Random;
@@ -164,7 +152,6 @@
 
     sput-object v5, Landroid/bluetooth/BluetoothAdapter$RfcommChannelPicker;->sRandom:Ljava/util/Random;
 
-    .line 865
     .end local v0           #arr$:[I
     .end local v1           #i:I
     .end local v2           #i$:I
@@ -180,18 +167,14 @@
 
     iput-object v5, p0, Landroid/bluetooth/BluetoothAdapter$RfcommChannelPicker;->mChannels:Ljava/util/LinkedList;
 
-    .line 866
     monitor-exit v6
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 867
     iput-object p1, p0, Landroid/bluetooth/BluetoothAdapter$RfcommChannelPicker;->mUuid:Ljava/util/UUID;
 
-    .line 868
     return-void
 
-    .line 866
     :catchall_0
     move-exception v5
 
@@ -209,7 +192,6 @@
     .locals 3
 
     .prologue
-    .line 871
     iget-object v0, p0, Landroid/bluetooth/BluetoothAdapter$RfcommChannelPicker;->mChannels:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->size()I
@@ -218,10 +200,8 @@
 
     if-nez v0, :cond_0
 
-    .line 872
     const/4 v0, -0x1
 
-    .line 874
     :goto_0
     return v0
 

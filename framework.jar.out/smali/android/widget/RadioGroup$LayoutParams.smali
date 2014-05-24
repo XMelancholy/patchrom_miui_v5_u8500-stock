@@ -21,10 +21,8 @@
     .parameter "h"
 
     .prologue
-    .line 278
     invoke-direct {p0, p1, p2}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
 
-    .line 279
     return-void
 .end method
 
@@ -35,10 +33,8 @@
     .parameter "initWeight"
 
     .prologue
-    .line 285
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/LinearLayout$LayoutParams;-><init>(IIF)V
 
-    .line 286
     return-void
 .end method
 
@@ -48,10 +44,8 @@
     .parameter "attrs"
 
     .prologue
-    .line 271
     invoke-direct {p0, p1, p2}, Landroid/widget/LinearLayout$LayoutParams;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 272
     return-void
 .end method
 
@@ -60,10 +54,8 @@
     .parameter "p"
 
     .prologue
-    .line 292
     invoke-direct {p0, p1}, Landroid/widget/LinearLayout$LayoutParams;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 293
     return-void
 .end method
 
@@ -72,10 +64,8 @@
     .parameter "source"
 
     .prologue
-    .line 299
     invoke-direct {p0, p1}, Landroid/widget/LinearLayout$LayoutParams;-><init>(Landroid/view/ViewGroup$MarginLayoutParams;)V
 
-    .line 300
     return-void
 .end method
 
@@ -90,14 +80,12 @@
     .prologue
     const/4 v1, -0x2
 
-    .line 316
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 317
     const-string v0, "layout_width"
 
     invoke-virtual {p1, p2, v0}, Landroid/content/res/TypedArray;->getLayoutDimension(ILjava/lang/String;)I
@@ -106,7 +94,6 @@
 
     iput v0, p0, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    .line 322
     :goto_0
     invoke-virtual {p1, p3}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -114,7 +101,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 323
     const-string v0, "layout_height"
 
     invoke-virtual {p1, p3, v0}, Landroid/content/res/TypedArray;->getLayoutDimension(ILjava/lang/String;)I
@@ -123,17 +109,14 @@
 
     iput v0, p0, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 327
     :goto_1
     return-void
 
-    .line 319
     :cond_0
     iput v1, p0, Landroid/view/ViewGroup$LayoutParams;->width:I
 
     goto :goto_0
 
-    .line 325
     :cond_1
     iput v1, p0, Landroid/view/ViewGroup$LayoutParams;->height:I
 

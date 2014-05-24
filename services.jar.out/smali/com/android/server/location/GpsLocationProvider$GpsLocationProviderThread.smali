@@ -24,15 +24,12 @@
     .parameter
 
     .prologue
-    .line 1644
     iput-object p1, p0, Lcom/android/server/location/GpsLocationProvider$GpsLocationProviderThread;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
-    .line 1645
     const-string v0, "GpsLocationProvider"
 
     invoke-direct {p0, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
 
-    .line 1646
     return-void
 .end method
 
@@ -42,21 +39,17 @@
     .locals 4
 
     .prologue
-    .line 1649
     const/16 v0, 0xa
 
     invoke-static {v0}, Landroid/os/Process;->setThreadPriority(I)V
 
-    .line 1650
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$GpsLocationProviderThread;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     #calls: Lcom/android/server/location/GpsLocationProvider;->initialize()V
     invoke-static {v0}, Lcom/android/server/location/GpsLocationProvider;->access$2000(Lcom/android/server/location/GpsLocationProvider;)V
 
-    .line 1651
     invoke-static {}, Landroid/os/Looper;->prepare()V
 
-    .line 1652
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$GpsLocationProviderThread;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     new-instance v1, Lcom/android/server/location/GpsLocationProvider$ProviderHandler;
@@ -70,7 +63,6 @@
     #setter for: Lcom/android/server/location/GpsLocationProvider;->mHandler:Landroid/os/Handler;
     invoke-static {v0, v1}, Lcom/android/server/location/GpsLocationProvider;->access$2102(Lcom/android/server/location/GpsLocationProvider;Landroid/os/Handler;)Landroid/os/Handler;
 
-    .line 1654
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$GpsLocationProviderThread;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     #getter for: Lcom/android/server/location/GpsLocationProvider;->mInitializedLatch:Ljava/util/concurrent/CountDownLatch;
@@ -80,9 +72,7 @@
 
     invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
 
-    .line 1655
     invoke-static {}, Landroid/os/Looper;->loop()V
 
-    .line 1656
     return-void
 .end method

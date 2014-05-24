@@ -42,10 +42,9 @@
     .locals 2
 
     .prologue
-    .line 1686
     sget-object v0, Landroid/provider/Telephony$MmsSms;->CONTENT_URI:Landroid/net/Uri;
 
-    const-string/jumbo v1, "pending"
+    const-string v1, "pending"
 
     invoke-static {v0, v1}, Landroid/net/Uri;->withAppendedPath(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 
@@ -60,7 +59,6 @@
     .locals 0
 
     .prologue
-    .line 1685
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void

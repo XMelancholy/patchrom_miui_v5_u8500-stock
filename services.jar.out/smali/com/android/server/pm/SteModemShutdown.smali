@@ -38,22 +38,18 @@
     .parameter "reboot"
 
     .prologue
-    .line 44
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 42
     const-string v0, "STE Modem Shutdown"
 
     iput-object v0, p0, Lcom/android/server/pm/SteModemShutdown;->TAG:Ljava/lang/String;
 
-    .line 87
     new-instance v0, Lcom/android/server/pm/SteModemShutdown$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/pm/SteModemShutdown$1;-><init>(Lcom/android/server/pm/SteModemShutdown;)V
 
     iput-object v0, p0, Lcom/android/server/pm/SteModemShutdown;->mConnection:Landroid/content/ServiceConnection;
 
-    .line 115
     new-instance v0, Lcom/android/server/pm/SteModemShutdown$2;
 
     const-string v1, "STE Modem Shutdown"
@@ -62,13 +58,10 @@
 
     iput-object v0, p0, Lcom/android/server/pm/SteModemShutdown;->mHandlerThread:Landroid/os/HandlerThread;
 
-    .line 45
     iput-boolean p2, p0, Lcom/android/server/pm/SteModemShutdown;->mReboot:Z
 
-    .line 46
     iput-object p1, p0, Lcom/android/server/pm/SteModemShutdown;->mContext:Landroid/content/Context;
 
-    .line 47
     return-void
 .end method
 
@@ -77,7 +70,6 @@
     .parameter "x0"
 
     .prologue
-    .line 34
     iget-object v0, p0, Lcom/android/server/pm/SteModemShutdown;->mShutdownSync:Lcom/android/server/pm/SteModemShutdownSync;
 
     return-object v0
@@ -88,7 +80,6 @@
     .parameter "x0"
 
     .prologue
-    .line 34
     iget-object v0, p0, Lcom/android/server/pm/SteModemShutdown;->mServiceMessenger:Landroid/os/Messenger;
 
     return-object v0
@@ -100,7 +91,6 @@
     .parameter "x1"
 
     .prologue
-    .line 34
     iput-object p1, p0, Lcom/android/server/pm/SteModemShutdown;->mServiceMessenger:Landroid/os/Messenger;
 
     return-object p1
@@ -111,7 +101,6 @@
     .parameter "x0"
 
     .prologue
-    .line 34
     iget-object v0, p0, Lcom/android/server/pm/SteModemShutdown;->mHandlerThread:Landroid/os/HandlerThread;
 
     return-object v0
@@ -122,7 +111,6 @@
     .parameter "x0"
 
     .prologue
-    .line 34
     iget-object v0, p0, Lcom/android/server/pm/SteModemShutdown;->mHandler:Lcom/android/server/pm/SteModemShutdown$SteModemShutdownHandler;
 
     return-object v0
@@ -134,7 +122,6 @@
     .parameter "x1"
 
     .prologue
-    .line 34
     iput-object p1, p0, Lcom/android/server/pm/SteModemShutdown;->mHandler:Lcom/android/server/pm/SteModemShutdown$SteModemShutdownHandler;
 
     return-object p1
@@ -145,7 +132,6 @@
     .parameter "x0"
 
     .prologue
-    .line 34
     iget-object v0, p0, Lcom/android/server/pm/SteModemShutdown;->mMessenger:Landroid/os/Messenger;
 
     return-object v0
@@ -157,7 +143,6 @@
     .parameter "x1"
 
     .prologue
-    .line 34
     iput-object p1, p0, Lcom/android/server/pm/SteModemShutdown;->mMessenger:Landroid/os/Messenger;
 
     return-object p1
@@ -168,7 +153,6 @@
     .parameter "x0"
 
     .prologue
-    .line 34
     iget-boolean v0, p0, Lcom/android/server/pm/SteModemShutdown;->mReboot:Z
 
     return v0
@@ -179,7 +163,6 @@
     .parameter "x0"
 
     .prologue
-    .line 34
     iget-object v0, p0, Lcom/android/server/pm/SteModemShutdown;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -190,7 +173,6 @@
     .parameter "x0"
 
     .prologue
-    .line 34
     iget-object v0, p0, Lcom/android/server/pm/SteModemShutdown;->mConnection:Landroid/content/ServiceConnection;
 
     return-object v0
@@ -202,7 +184,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 70
     :try_start_0
     iget-object v1, p0, Lcom/android/server/pm/SteModemShutdown;->mShutdownSync:Lcom/android/server/pm/SteModemShutdownSync;
 
@@ -210,20 +191,16 @@
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 71
     :try_start_1
     iget-object v2, p0, Lcom/android/server/pm/SteModemShutdown;->mServiceMessenger:Landroid/os/Messenger;
 
     if-eqz v2, :cond_0
 
-    .line 72
     monitor-exit v1
 
-    .line 84
     :goto_0
     return v0
 
-    .line 75
     :cond_0
     iget-object v2, p0, Lcom/android/server/pm/SteModemShutdown;->mShutdownSync:Lcom/android/server/pm/SteModemShutdownSync;
 
@@ -231,17 +208,14 @@
 
     invoke-virtual {v2, v3, v4}, Ljava/lang/Object;->wait(J)V
 
-    .line 77
     iget-object v2, p0, Lcom/android/server/pm/SteModemShutdown;->mServiceMessenger:Landroid/os/Messenger;
 
     if-eqz v2, :cond_1
 
-    .line 78
     monitor-exit v1
 
     goto :goto_0
 
-    .line 80
     :catchall_0
     move-exception v0
 
@@ -254,17 +228,14 @@
     :try_end_2
     .catch Ljava/lang/InterruptedException; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 81
     :catch_0
     move-exception v0
 
-    .line 84
     :goto_1
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 80
     :cond_1
     :try_start_3
     monitor-exit v1
@@ -281,23 +252,18 @@
     .parameter "steShutdownSync"
 
     .prologue
-    .line 50
     if-nez p1, :cond_0
 
-    .line 66
     :goto_0
     return-void
 
-    .line 53
     :cond_0
     iput-object p1, p0, Lcom/android/server/pm/SteModemShutdown;->mShutdownSync:Lcom/android/server/pm/SteModemShutdownSync;
 
-    .line 54
     iget-object v1, p0, Lcom/android/server/pm/SteModemShutdown;->mShutdownSync:Lcom/android/server/pm/SteModemShutdownSync;
 
     monitor-enter v1
 
-    .line 55
     :try_start_0
     iget-object v0, p0, Lcom/android/server/pm/SteModemShutdown;->mShutdownSync:Lcom/android/server/pm/SteModemShutdownSync;
 
@@ -305,7 +271,6 @@
 
     iput-boolean v2, v0, Lcom/android/server/pm/SteModemShutdownSync;->useFallback:Z
 
-    .line 58
     iget-object v0, p0, Lcom/android/server/pm/SteModemShutdown;->mContext:Landroid/content/Context;
 
     if-eqz v0, :cond_1
@@ -334,7 +299,6 @@
 
     if-nez v0, :cond_2
 
-    .line 62
     :cond_1
     const-string v0, "STE Modem Shutdown"
 
@@ -342,14 +306,12 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 63
     iget-object v0, p0, Lcom/android/server/pm/SteModemShutdown;->mShutdownSync:Lcom/android/server/pm/SteModemShutdownSync;
 
     const/4 v2, 0x1
 
     iput-boolean v2, v0, Lcom/android/server/pm/SteModemShutdownSync;->useFallback:Z
 
-    .line 65
     :cond_2
     monitor-exit v1
 

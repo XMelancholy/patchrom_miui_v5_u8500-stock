@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 2202
     iput-object p1, p0, Lcom/android/server/PowerManagerService$ScreenBrightnessAnimator$1;->this$1:Lcom/android/server/PowerManagerService$ScreenBrightnessAnimator;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -43,7 +42,6 @@
 
     const/4 v10, 0x0
 
-    .line 2204
     iget-object v11, p0, Lcom/android/server/PowerManagerService$ScreenBrightnessAnimator$1;->this$1:Lcom/android/server/PowerManagerService$ScreenBrightnessAnimator;
 
     iget-object v11, v11, Lcom/android/server/PowerManagerService$ScreenBrightnessAnimator;->this$0:Lcom/android/server/PowerManagerService;
@@ -68,7 +66,6 @@
 
     move v0, v9
 
-    .line 2207
     .local v0, brightnessMode:I
     :goto_0
     iget v11, p1, Landroid/os/Message;->what:I
@@ -77,31 +74,25 @@
 
     if-ne v11, v12, :cond_7
 
-    .line 2208
     iget v4, p1, Landroid/os/Message;->arg1:I
 
-    .line 2209
     .local v4, mask:I
     iget v8, p1, Landroid/os/Message;->arg2:I
 
-    .line 2210
     .local v8, value:I
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v6
 
-    .line 2211
     .local v6, tStart:J
     and-int/lit8 v11, v4, 0x2
 
     if-eqz v11, :cond_0
 
-    .line 2213
     const/4 v11, 0x2
 
     if-le v8, v11, :cond_0
 
-    .line 2215
     const-string v11, "PowerManagerService"
 
     new-instance v12, Ljava/lang/StringBuilder;
@@ -124,7 +115,6 @@
 
     invoke-static {v11, v12}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2216
     iget-object v11, p0, Lcom/android/server/PowerManagerService$ScreenBrightnessAnimator$1;->this$1:Lcom/android/server/PowerManagerService$ScreenBrightnessAnimator;
 
     iget-object v11, v11, Lcom/android/server/PowerManagerService$ScreenBrightnessAnimator;->this$0:Lcom/android/server/PowerManagerService;
@@ -136,7 +126,6 @@
 
     invoke-virtual {v11, v8, v0}, Lcom/android/server/LightsService$Light;->setBrightness(II)V
 
-    .line 2219
     :cond_0
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
@@ -144,13 +133,11 @@
 
     sub-long v2, v11, v6
 
-    .line 2220
     .local v2, elapsed:J
     and-int/lit8 v11, v4, 0x4
 
     if-eqz v11, :cond_1
 
-    .line 2221
     iget-object v11, p0, Lcom/android/server/PowerManagerService$ScreenBrightnessAnimator$1;->this$1:Lcom/android/server/PowerManagerService$ScreenBrightnessAnimator;
 
     iget-object v11, v11, Lcom/android/server/PowerManagerService$ScreenBrightnessAnimator;->this$0:Lcom/android/server/PowerManagerService;
@@ -162,13 +149,11 @@
 
     invoke-virtual {v11, v8}, Lcom/android/server/LightsService$Light;->setBrightness(I)V
 
-    .line 2223
     :cond_1
     and-int/lit8 v11, v4, 0x8
 
     if-eqz v11, :cond_2
 
-    .line 2224
     iget-object v11, p0, Lcom/android/server/PowerManagerService$ScreenBrightnessAnimator$1;->this$1:Lcom/android/server/PowerManagerService$ScreenBrightnessAnimator;
 
     iget-object v11, v11, Lcom/android/server/PowerManagerService$ScreenBrightnessAnimator;->this$0:Lcom/android/server/PowerManagerService;
@@ -180,7 +165,6 @@
 
     invoke-virtual {v11, v8}, Lcom/android/server/LightsService$Light;->setBrightness(I)V
 
-    .line 2227
     :cond_2
     const-wide/16 v11, 0x64
 
@@ -188,7 +172,6 @@
 
     if-lez v11, :cond_3
 
-    .line 2228
     const-string v11, "PowerManagerService"
 
     new-instance v12, Ljava/lang/StringBuilder;
@@ -221,7 +204,6 @@
 
     invoke-static {v11, v12}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2233
     :cond_3
     const-wide/16 v11, 0x10
 
@@ -231,29 +213,24 @@
 
     const/16 v1, 0x10
 
-    .line 2234
     .local v1, delay:I
     :goto_1
     monitor-enter p0
 
-    .line 2235
     :try_start_0
     iget-object v9, p0, Lcom/android/server/PowerManagerService$ScreenBrightnessAnimator$1;->this$1:Lcom/android/server/PowerManagerService$ScreenBrightnessAnimator;
 
     iput v8, v9, Lcom/android/server/PowerManagerService$ScreenBrightnessAnimator;->currentValue:I
 
-    .line 2236
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2237
     iget-object v9, p0, Lcom/android/server/PowerManagerService$ScreenBrightnessAnimator$1;->this$1:Lcom/android/server/PowerManagerService$ScreenBrightnessAnimator;
 
     #calls: Lcom/android/server/PowerManagerService$ScreenBrightnessAnimator;->animateInternal(IZI)V
     invoke-static {v9, v4, v10, v1}, Lcom/android/server/PowerManagerService$ScreenBrightnessAnimator;->access$5000(Lcom/android/server/PowerManagerService$ScreenBrightnessAnimator;IZI)V
 
-    .line 2242
     .end local v1           #delay:I
     .end local v2           #elapsed:J
     .end local v4           #mask:I
@@ -267,7 +244,6 @@
     :cond_5
     move v0, v10
 
-    .line 2204
     goto/16 :goto_0
 
     .restart local v0       #brightnessMode:I
@@ -278,10 +254,8 @@
     :cond_6
     move v1, v9
 
-    .line 2233
     goto :goto_1
 
-    .line 2236
     .restart local v1       #delay:I
     :catchall_0
     move-exception v9
@@ -293,7 +267,6 @@
 
     throw v9
 
-    .line 2238
     .end local v1           #delay:I
     .end local v2           #elapsed:J
     .end local v4           #mask:I
@@ -306,10 +279,8 @@
 
     if-ne v9, v10, :cond_4
 
-    .line 2239
     iget v5, p1, Landroid/os/Message;->arg1:I
 
-    .line 2240
     .local v5, mode:I
     iget-object v9, p0, Lcom/android/server/PowerManagerService$ScreenBrightnessAnimator$1;->this$1:Lcom/android/server/PowerManagerService$ScreenBrightnessAnimator;
 

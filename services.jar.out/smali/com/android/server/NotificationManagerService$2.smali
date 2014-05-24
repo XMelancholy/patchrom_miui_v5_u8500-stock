@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 491
     iput-object p1, p0, Lcom/android/server/NotificationManagerService$2;->this$0:Lcom/android/server/NotificationManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,20 +39,16 @@
     .parameter "intent"
 
     .prologue
-    .line 494
     invoke-virtual/range {p2 .. p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 496
     .local v1, action:Ljava/lang/String;
     const/4 v9, 0x0
 
-    .line 497
     .local v9, queryRestart:Z
     const/4 v6, 0x0
 
-    .line 499
     .local v6, packageChanged:Z
     const-string v11, "android.intent.action.PACKAGE_REMOVED"
 
@@ -95,11 +90,9 @@
 
     if-eqz v11, :cond_7
 
-    .line 504
     :cond_0
     const/4 v7, 0x0
 
-    .line 505
     .local v7, pkgList:[Ljava/lang/String;
     const-string v11, "android.intent.action.EXTERNAL_APPLICATIONS_UNAVAILABLE"
 
@@ -109,7 +102,6 @@
 
     if-eqz v11, :cond_1
 
-    .line 506
     const-string v11, "android.intent.extra.changed_package_list"
 
     move-object/from16 v0, p2
@@ -118,7 +110,6 @@
 
     move-result-object v7
 
-    .line 529
     :goto_0
     if-eqz v7, :cond_3
 
@@ -126,7 +117,6 @@
 
     if-lez v11, :cond_3
 
-    .line 530
     move-object v2, v7
 
     .local v2, arr$:[Ljava/lang/String;
@@ -141,7 +131,6 @@
 
     aget-object v8, v2, v4
 
-    .line 531
     .local v8, pkgName:Ljava/lang/String;
     iget-object v12, p0, Lcom/android/server/NotificationManagerService$2;->this$0:Lcom/android/server/NotificationManagerService;
 
@@ -156,12 +145,10 @@
     :goto_2
     invoke-virtual {v12, v8, v13, v14, v11}, Lcom/android/server/NotificationManagerService;->cancelAllNotificationsInt(Ljava/lang/String;IIZ)Z
 
-    .line 530
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_1
 
-    .line 507
     .end local v2           #arr$:[Ljava/lang/String;
     .end local v4           #i$:I
     .end local v5           #len$:I
@@ -169,7 +156,6 @@
     :cond_1
     if-eqz v9, :cond_2
 
-    .line 508
     const-string v11, "android.intent.extra.PACKAGES"
 
     move-object/from16 v0, p2
@@ -180,24 +166,20 @@
 
     goto :goto_0
 
-    .line 510
     :cond_2
     invoke-virtual/range {p2 .. p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v10
 
-    .line 511
     .local v10, uri:Landroid/net/Uri;
     if-nez v10, :cond_4
 
-    .line 548
     .end local v7           #pkgList:[Ljava/lang/String;
     .end local v10           #uri:Landroid/net/Uri;
     :cond_3
     :goto_3
     return-void
 
-    .line 514
     .restart local v7       #pkgList:[Ljava/lang/String;
     .restart local v10       #uri:Landroid/net/Uri;
     :cond_4
@@ -205,14 +187,11 @@
 
     move-result-object v8
 
-    .line 515
     .restart local v8       #pkgName:Ljava/lang/String;
     if-eqz v8, :cond_3
 
-    .line 518
     if-eqz v6, :cond_5
 
-    .line 520
     iget-object v11, p0, Lcom/android/server/NotificationManagerService$2;->this$0:Lcom/android/server/NotificationManagerService;
 
     iget-object v11, v11, Lcom/android/server/NotificationManagerService;->mContext:Landroid/content/Context;
@@ -225,7 +204,6 @@
 
     move-result v3
 
-    .line 522
     .local v3, enabled:I
     const/4 v11, 0x1
 
@@ -233,7 +211,6 @@
 
     if-eqz v3, :cond_3
 
-    .line 527
     .end local v3           #enabled:I
     :cond_5
     const/4 v11, 0x1
@@ -248,7 +225,6 @@
     .restart local v7       #pkgList:[Ljava/lang/String;
     goto :goto_0
 
-    .line 531
     .end local v10           #uri:Landroid/net/Uri;
     .restart local v2       #arr$:[Ljava/lang/String;
     .restart local v4       #i$:I
@@ -258,7 +234,6 @@
 
     goto :goto_2
 
-    .line 534
     .end local v2           #arr$:[Ljava/lang/String;
     .end local v4           #i$:I
     .end local v5           #len$:I
@@ -273,7 +248,6 @@
 
     if-eqz v11, :cond_8
 
-    .line 537
     iget-object v11, p0, Lcom/android/server/NotificationManagerService$2;->this$0:Lcom/android/server/NotificationManagerService;
 
     const/4 v12, 0x1
@@ -283,7 +257,6 @@
 
     goto :goto_3
 
-    .line 538
     :cond_8
     const-string v11, "android.intent.action.SCREEN_OFF"
 
@@ -293,7 +266,6 @@
 
     if-eqz v11, :cond_9
 
-    .line 539
     iget-object v11, p0, Lcom/android/server/NotificationManagerService$2;->this$0:Lcom/android/server/NotificationManagerService;
 
     const/4 v12, 0x0
@@ -303,7 +275,6 @@
 
     goto :goto_3
 
-    .line 540
     :cond_9
     const-string v11, "android.intent.action.PHONE_STATE"
 
@@ -313,7 +284,6 @@
 
     if-eqz v11, :cond_a
 
-    .line 541
     iget-object v11, p0, Lcom/android/server/NotificationManagerService$2;->this$0:Lcom/android/server/NotificationManagerService;
 
     const-string v12, "state"
@@ -333,7 +303,6 @@
     #setter for: Lcom/android/server/NotificationManagerService;->mInCall:Z
     invoke-static {v11, v12}, Lcom/android/server/NotificationManagerService;->access$1202(Lcom/android/server/NotificationManagerService;Z)Z
 
-    .line 543
     iget-object v11, p0, Lcom/android/server/NotificationManagerService$2;->this$0:Lcom/android/server/NotificationManagerService;
 
     #calls: Lcom/android/server/NotificationManagerService;->updateNotificationPulse()V
@@ -341,7 +310,6 @@
 
     goto :goto_3
 
-    .line 544
     :cond_a
     const-string v11, "android.intent.action.USER_PRESENT"
 
@@ -351,7 +319,6 @@
 
     if-eqz v11, :cond_3
 
-    .line 546
     iget-object v11, p0, Lcom/android/server/NotificationManagerService$2;->this$0:Lcom/android/server/NotificationManagerService;
 
     #getter for: Lcom/android/server/NotificationManagerService;->mNotificationLight:Lcom/android/server/LightsService$Light;

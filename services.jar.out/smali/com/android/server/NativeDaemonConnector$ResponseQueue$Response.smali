@@ -38,17 +38,14 @@
     .parameter "r"
 
     .prologue
-    .line 489
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 487
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/NativeDaemonConnector$ResponseQueue$Response;->responses:Ljava/util/LinkedList;
 
-    .line 489
     iput p1, p0, Lcom/android/server/NativeDaemonConnector$ResponseQueue$Response;->cmdNum:I
 
     iput-object p2, p0, Lcom/android/server/NativeDaemonConnector$ResponseQueue$Response;->request:Ljava/lang/String;

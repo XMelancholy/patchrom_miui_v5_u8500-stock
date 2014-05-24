@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 103
     iput-object p1, p0, Lcom/android/internal/telephony/cdma/CdmaLteUiccRecords$EfCsimSpnLoaded;->this$0:Lcom/android/internal/telephony/cdma/CdmaLteUiccRecords;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .parameter "x1"
 
     .prologue
-    .line 103
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/cdma/CdmaLteUiccRecords$EfCsimSpnLoaded;-><init>(Lcom/android/internal/telephony/cdma/CdmaLteUiccRecords;)V
 
     return-void
@@ -53,7 +51,6 @@
     .locals 1
 
     .prologue
-    .line 105
     const-string v0, "EF_CSIM_SPN"
 
     return-object v0
@@ -70,7 +67,6 @@
 
     const/4 v8, 0x0
 
-    .line 109
     iget-object v6, p1, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
     check-cast v6, [B
@@ -79,7 +75,6 @@
 
     check-cast v0, [B
 
-    .line 110
     .local v0, data:[B
     iget-object v6, p0, Lcom/android/internal/telephony/cdma/CdmaLteUiccRecords$EfCsimSpnLoaded;->this$0:Lcom/android/internal/telephony/cdma/CdmaLteUiccRecords;
 
@@ -107,7 +102,6 @@
 
     invoke-virtual {v6, v10}, Lcom/android/internal/telephony/cdma/CdmaLteUiccRecords;->log(Ljava/lang/String;)V
 
-    .line 114
     iget-object v10, p0, Lcom/android/internal/telephony/cdma/CdmaLteUiccRecords$EfCsimSpnLoaded;->this$0:Lcom/android/internal/telephony/cdma/CdmaLteUiccRecords;
 
     aget-byte v6, v0, v8
@@ -121,20 +115,16 @@
     :goto_0
     iput-boolean v6, v10, Lcom/android/internal/telephony/cdma/CdmaLteUiccRecords;->mCsimSpnDisplayCondition:Z
 
-    .line 116
     aget-byte v2, v0, v7
 
-    .line 117
     .local v2, encoding:I
     const/4 v6, 0x2
 
     aget-byte v3, v0, v6
 
-    .line 118
     .local v3, language:I
     new-array v5, v9, [B
 
-    .line 119
     .local v5, spnData:[B
     const/4 v7, 0x3
 
@@ -147,7 +137,6 @@
     :goto_1
     invoke-static {v0, v7, v5, v8, v6}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 122
     const/4 v4, 0x0
 
     .local v4, numBytes:I
@@ -156,7 +145,6 @@
 
     if-ge v4, v6, :cond_0
 
-    .line 123
     aget-byte v6, v5, v4
 
     and-int/lit16 v6, v6, 0xff
@@ -165,11 +153,9 @@
 
     if-ne v6, v7, :cond_3
 
-    .line 126
     :cond_0
     if-nez v4, :cond_4
 
-    .line 127
     iget-object v6, p0, Lcom/android/internal/telephony/cdma/CdmaLteUiccRecords$EfCsimSpnLoaded;->this$0:Lcom/android/internal/telephony/cdma/CdmaLteUiccRecords;
 
     const-string v7, ""
@@ -177,7 +163,6 @@
     #setter for: Lcom/android/internal/telephony/IccRecords;->spn:Ljava/lang/String;
     invoke-static {v6, v7}, Lcom/android/internal/telephony/cdma/CdmaLteUiccRecords;->access$202(Lcom/android/internal/telephony/cdma/CdmaLteUiccRecords;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 153
     :goto_3
     return-void
 
@@ -188,7 +173,6 @@
     :cond_1
     move v6, v8
 
-    .line 114
     goto :goto_0
 
     .restart local v2       #encoding:I
@@ -197,21 +181,17 @@
     :cond_2
     move v6, v9
 
-    .line 119
     goto :goto_1
 
-    .line 122
     .restart local v4       #numBytes:I
     :cond_3
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_2
 
-    .line 131
     :cond_4
     packed-switch v2, :pswitch_data_0
 
-    .line 145
     :pswitch_0
     :try_start_0
     iget-object v6, p0, Lcom/android/internal/telephony/cdma/CdmaLteUiccRecords$EfCsimSpnLoaded;->this$0:Lcom/android/internal/telephony/cdma/CdmaLteUiccRecords;
@@ -222,7 +202,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 150
     :goto_4
     iget-object v6, p0, Lcom/android/internal/telephony/cdma/CdmaLteUiccRecords$EfCsimSpnLoaded;->this$0:Lcom/android/internal/telephony/cdma/CdmaLteUiccRecords;
 
@@ -230,7 +209,7 @@
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v8, "spn="
+    const-string v8, "spn="
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -253,14 +232,13 @@
 
     invoke-virtual {v6, v7}, Lcom/android/internal/telephony/cdma/CdmaLteUiccRecords;->log(Ljava/lang/String;)V
 
-    .line 151
     iget-object v6, p0, Lcom/android/internal/telephony/cdma/CdmaLteUiccRecords$EfCsimSpnLoaded;->this$0:Lcom/android/internal/telephony/cdma/CdmaLteUiccRecords;
 
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v8, "spnCondition="
+    const-string v8, "spnCondition="
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -280,7 +258,6 @@
 
     invoke-virtual {v6, v7}, Lcom/android/internal/telephony/cdma/CdmaLteUiccRecords;->log(Ljava/lang/String;)V
 
-    .line 152
     const-string v6, "gsm.sim.operator.alpha"
 
     iget-object v7, p0, Lcom/android/internal/telephony/cdma/CdmaLteUiccRecords$EfCsimSpnLoaded;->this$0:Lcom/android/internal/telephony/cdma/CdmaLteUiccRecords;
@@ -294,7 +271,6 @@
 
     goto :goto_3
 
-    .line 134
     :pswitch_1
     :try_start_1
     iget-object v6, p0, Lcom/android/internal/telephony/cdma/CdmaLteUiccRecords$EfCsimSpnLoaded;->this$0:Lcom/android/internal/telephony/cdma/CdmaLteUiccRecords;
@@ -314,11 +290,9 @@
 
     goto :goto_4
 
-    .line 147
     :catch_0
     move-exception v1
 
-    .line 148
     .local v1, e:Ljava/lang/Exception;
     iget-object v6, p0, Lcom/android/internal/telephony/cdma/CdmaLteUiccRecords$EfCsimSpnLoaded;->this$0:Lcom/android/internal/telephony/cdma/CdmaLteUiccRecords;
 
@@ -326,7 +300,7 @@
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v8, "spn decode error: "
+    const-string v8, "spn decode error: "
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -344,7 +318,6 @@
 
     goto :goto_4
 
-    .line 139
     .end local v1           #e:Ljava/lang/Exception;
     :pswitch_2
     :try_start_2
@@ -365,7 +338,6 @@
 
     goto :goto_4
 
-    .line 142
     :pswitch_3
     iget-object v6, p0, Lcom/android/internal/telephony/cdma/CdmaLteUiccRecords$EfCsimSpnLoaded;->this$0:Lcom/android/internal/telephony/cdma/CdmaLteUiccRecords;
 
@@ -373,7 +345,7 @@
 
     const/4 v8, 0x0
 
-    const-string/jumbo v9, "utf-16"
+    const-string v9, "utf-16"
 
     invoke-direct {v7, v5, v8, v4, v9}, Ljava/lang/String;-><init>([BIILjava/lang/String;)V
 
@@ -384,7 +356,6 @@
 
     goto/16 :goto_4
 
-    .line 131
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_1

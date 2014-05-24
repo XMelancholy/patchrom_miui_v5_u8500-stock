@@ -25,13 +25,10 @@
     .parameter "cr"
 
     .prologue
-    .line 256
     iput-object p1, p0, Landroid/widget/QuickContactBadge$QueryHandler;->this$0:Landroid/widget/QuickContactBadge;
 
-    .line 257
     invoke-direct {p0, p2}, Landroid/content/AsyncQueryHandler;-><init>(Landroid/content/ContentResolver;)V
 
-    .line 258
     return-void
 .end method
 
@@ -102,19 +99,16 @@
 
     invoke-static {v7, v8, v5, v9, v10}, Landroid/provider/ContactsContract$QuickContact;->showQuickContact(Landroid/content/Context;Landroid/view/View;Landroid/net/Uri;I[Ljava/lang/String;)V
 
-    .line 314
     :cond_2
     :goto_1
     return-void
 
-    .line 269
     .restart local p2
     :pswitch_0
     const/4 v6, 0x1
 
-    .line 270
     :try_start_0
-    const-string/jumbo v7, "tel"
+    const-string v7, "tel"
 
     check-cast p2, Ljava/lang/String;
 
@@ -125,7 +119,6 @@
 
     move-result-object v2
 
-    .line 274
     :pswitch_1
     if-eqz p3, :cond_0
 
@@ -135,14 +128,12 @@
 
     if-eqz v7, :cond_0
 
-    .line 275
     const/4 v7, 0x0
 
     invoke-interface {p3, v7}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v0
 
-    .line 276
     .local v0, contactId:J
     const/4 v7, 0x1
 
@@ -150,24 +141,20 @@
 
     move-result-object v4
 
-    .line 277
     .local v4, lookupKey:Ljava/lang/String;
     invoke-static {v0, v1, v4}, Landroid/provider/ContactsContract$Contacts;->getLookupUri(JLjava/lang/String;)Landroid/net/Uri;
 
     move-result-object v5
 
-    .line 278
     goto :goto_0
 
-    .line 283
     .end local v0           #contactId:J
     .end local v4           #lookupKey:Ljava/lang/String;
     .restart local p2
     :pswitch_2
     const/4 v6, 0x1
 
-    .line 284
-    const-string/jumbo v7, "mailto"
+    const-string v7, "mailto"
 
     check-cast p2, Ljava/lang/String;
 
@@ -178,7 +165,6 @@
 
     move-result-object v2
 
-    .line 288
     :pswitch_3
     if-eqz p3, :cond_0
 
@@ -188,14 +174,12 @@
 
     if-eqz v7, :cond_0
 
-    .line 289
     const/4 v7, 0x0
 
     invoke-interface {p3, v7}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v0
 
-    .line 290
     .restart local v0       #contactId:J
     const/4 v7, 0x1
 
@@ -203,7 +187,6 @@
 
     move-result-object v4
 
-    .line 291
     .restart local v4       #lookupKey:Ljava/lang/String;
     invoke-static {v0, v1, v4}, Landroid/provider/ContactsContract$Contacts;->getLookupUri(JLjava/lang/String;)Landroid/net/Uri;
     :try_end_0
@@ -213,7 +196,6 @@
 
     goto :goto_0
 
-    .line 297
     .end local v0           #contactId:J
     .end local v4           #lookupKey:Ljava/lang/String;
     :catchall_0
@@ -221,25 +203,20 @@
 
     if-eqz p3, :cond_3
 
-    .line 298
     invoke-interface {p3}, Landroid/database/Cursor;->close()V
 
-    .line 297
     :cond_3
     throw v7
 
-    .line 309
     :cond_4
     if-eqz v2, :cond_2
 
-    .line 311
     new-instance v3, Landroid/content/Intent;
 
     const-string v7, "com.android.contacts.action.SHOW_OR_CREATE_CONTACT"
 
     invoke-direct {v3, v7, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .line 312
     .local v3, intent:Landroid/content/Intent;
     iget-object v7, p0, Landroid/widget/QuickContactBadge$QueryHandler;->this$0:Landroid/widget/QuickContactBadge;
 
@@ -251,7 +228,6 @@
 
     goto :goto_1
 
-    .line 267
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_3

@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 3398
     iput-object p1, p0, Lcom/android/server/PowerManagerService$13;->this$0:Lcom/android/server/PowerManagerService;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .parameter "accuracy"
 
     .prologue
-    .line 3422
     return-void
 .end method
 
@@ -52,7 +50,6 @@
     .parameter "event"
 
     .prologue
-    .line 3404
     iget-object v0, p0, Lcom/android/server/PowerManagerService$13;->this$0:Lcom/android/server/PowerManagerService;
 
     #getter for: Lcom/android/server/PowerManagerService;->mLocks:Lcom/android/server/PowerManagerService$LockList;
@@ -62,7 +59,6 @@
 
     monitor-enter v1
 
-    .line 3406
     :try_start_0
     iget-object v0, p0, Lcom/android/server/PowerManagerService$13;->this$0:Lcom/android/server/PowerManagerService;
 
@@ -73,14 +69,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 3407
     monitor-exit v1
 
-    .line 3417
     :goto_0
     return-void
 
-    .line 3409
     :cond_0
     iget-object v0, p0, Lcom/android/server/PowerManagerService$13;->this$0:Lcom/android/server/PowerManagerService;
 
@@ -102,7 +95,6 @@
     #calls: Lcom/android/server/PowerManagerService;->handleLightSensorValue(IZ)V
     invoke-static {v0, v2, v3}, Lcom/android/server/PowerManagerService;->access$7300(Lcom/android/server/PowerManagerService;IZ)V
 
-    .line 3410
     iget-object v0, p0, Lcom/android/server/PowerManagerService$13;->this$0:Lcom/android/server/PowerManagerService;
 
     #getter for: Lcom/android/server/PowerManagerService;->mWaitingForFirstLightSensor:Z
@@ -121,7 +113,6 @@
 
     if-nez v0, :cond_1
 
-    .line 3414
     iget-object v0, p0, Lcom/android/server/PowerManagerService$13;->this$0:Lcom/android/server/PowerManagerService;
 
     const/4 v2, 0x0
@@ -129,7 +120,6 @@
     #setter for: Lcom/android/server/PowerManagerService;->mWaitingForFirstLightSensor:Z
     invoke-static {v0, v2}, Lcom/android/server/PowerManagerService;->access$7202(Lcom/android/server/PowerManagerService;Z)Z
 
-    .line 3416
     :cond_1
     monitor-exit v1
 

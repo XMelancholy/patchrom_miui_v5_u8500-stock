@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 8239
     iput-object p1, p0, Landroid/webkit/WebViewClassic$InvokeListBox$4;->this$1:Landroid/webkit/WebViewClassic$InvokeListBox;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .parameter "dialog"
 
     .prologue
-    .line 8242
     iget-object v0, p0, Landroid/webkit/WebViewClassic$InvokeListBox$4;->this$1:Landroid/webkit/WebViewClassic$InvokeListBox;
 
     iget-object v0, v0, Landroid/webkit/WebViewClassic$InvokeListBox;->this$0:Landroid/webkit/WebViewClassic;
@@ -60,7 +58,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/webkit/WebViewCore;->sendMessage(III)V
 
-    .line 8244
     iget-object v0, p0, Landroid/webkit/WebViewClassic$InvokeListBox$4;->this$1:Landroid/webkit/WebViewClassic$InvokeListBox;
 
     iget-object v0, v0, Landroid/webkit/WebViewClassic$InvokeListBox;->this$0:Landroid/webkit/WebViewClassic;
@@ -70,6 +67,5 @@
     #setter for: Landroid/webkit/WebViewClassic;->mListBoxDialog:Landroid/app/AlertDialog;
     invoke-static {v0, v1}, Landroid/webkit/WebViewClassic;->access$7902(Landroid/webkit/WebViewClassic;Landroid/app/AlertDialog;)Landroid/app/AlertDialog;
 
-    .line 8245
     return-void
 .end method

@@ -32,22 +32,18 @@
     .parameter "listener"
 
     .prologue
-    .line 202
     iput-object p1, p0, Lcom/stericsson/hardware/fm/FmReceiverService$OnScanReceiver;->this$0:Lcom/stericsson/hardware/fm/FmReceiverService;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 203
     iput-object p2, p0, Lcom/stericsson/hardware/fm/FmReceiverService$OnScanReceiver;->mListener:Lcom/stericsson/hardware/fm/IOnScanListener;
 
-    .line 204
     invoke-interface {p2}, Lcom/stericsson/hardware/fm/IOnScanListener;->asBinder()Landroid/os/IBinder;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/stericsson/hardware/fm/FmReceiverService$OnScanReceiver;->mKey:Ljava/lang/Object;
 
-    .line 205
     return-void
 .end method
 
@@ -57,14 +53,12 @@
     .locals 3
 
     .prologue
-    .line 236
     const-string v0, "FmReceiverService"
 
     const-string v1, "FM receiver listener died"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 238
     iget-object v0, p0, Lcom/stericsson/hardware/fm/FmReceiverService$OnScanReceiver;->this$0:Lcom/stericsson/hardware/fm/FmReceiverService;
 
     #getter for: Lcom/stericsson/hardware/fm/FmReceiverService;->mOnScanReceivers:Ljava/util/HashMap;
@@ -74,7 +68,6 @@
 
     monitor-enter v1
 
-    .line 239
     :try_start_0
     iget-object v0, p0, Lcom/stericsson/hardware/fm/FmReceiverService$OnScanReceiver;->this$0:Lcom/stericsson/hardware/fm/FmReceiverService;
 
@@ -87,17 +80,14 @@
 
     invoke-virtual {v0, v2}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 240
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 241
     iget-object v0, p0, Lcom/stericsson/hardware/fm/FmReceiverService$OnScanReceiver;->mListener:Lcom/stericsson/hardware/fm/IOnScanListener;
 
     if-eqz v0, :cond_0
 
-    .line 242
     iget-object v0, p0, Lcom/stericsson/hardware/fm/FmReceiverService$OnScanReceiver;->mListener:Lcom/stericsson/hardware/fm/IOnScanListener;
 
     invoke-interface {v0}, Lcom/stericsson/hardware/fm/IOnScanListener;->asBinder()Landroid/os/IBinder;
@@ -108,11 +98,9 @@
 
     invoke-interface {v0, p0, v1}, Landroid/os/IBinder;->unlinkToDeath(Landroid/os/IBinder$DeathRecipient;I)Z
 
-    .line 244
     :cond_0
     return-void
 
-    .line 240
     :catchall_0
     move-exception v0
 
@@ -131,28 +119,23 @@
     .parameter "aborted"
 
     .prologue
-    .line 225
     :try_start_0
     monitor-enter p0
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 226
     :try_start_1
     iget-object v1, p0, Lcom/stericsson/hardware/fm/FmReceiverService$OnScanReceiver;->mListener:Lcom/stericsson/hardware/fm/IOnScanListener;
 
     invoke-interface {v1, p1, p2, p3}, Lcom/stericsson/hardware/fm/IOnScanListener;->onFullScan([I[IZ)V
 
-    .line 227
     monitor-exit p0
 
-    .line 232
     const/4 v1, 0x1
 
     :goto_0
     return v1
 
-    .line 227
     :catchall_0
     move-exception v1
 
@@ -165,11 +148,9 @@
     :try_end_2
     .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 228
     :catch_0
     move-exception v0
 
-    .line 229
     .local v0, ex:Landroid/os/RemoteException;
     const-string v1, "FmReceiverService"
 
@@ -177,7 +158,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 230
     const/4 v1, 0x0
 
     goto :goto_0
@@ -191,28 +171,23 @@
     .parameter "aborted"
 
     .prologue
-    .line 213
     :try_start_0
     monitor-enter p0
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 214
     :try_start_1
     iget-object v1, p0, Lcom/stericsson/hardware/fm/FmReceiverService$OnScanReceiver;->mListener:Lcom/stericsson/hardware/fm/IOnScanListener;
 
     invoke-interface {v1, p1, p2, p3, p4}, Lcom/stericsson/hardware/fm/IOnScanListener;->onScan(IIIZ)V
 
-    .line 215
     monitor-exit p0
 
-    .line 220
     const/4 v1, 0x1
 
     :goto_0
     return v1
 
-    .line 215
     :catchall_0
     move-exception v1
 
@@ -225,11 +200,9 @@
     :try_end_2
     .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 216
     :catch_0
     move-exception v0
 
-    .line 217
     .local v0, ex:Landroid/os/RemoteException;
     const-string v1, "FmReceiverService"
 
@@ -237,7 +210,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 218
     const/4 v1, 0x0
 
     goto :goto_0
@@ -247,7 +219,6 @@
     .locals 1
 
     .prologue
-    .line 208
     iget-object v0, p0, Lcom/stericsson/hardware/fm/FmReceiverService$OnScanReceiver;->mListener:Lcom/stericsson/hardware/fm/IOnScanListener;
 
     return-object v0

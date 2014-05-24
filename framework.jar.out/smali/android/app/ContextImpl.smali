@@ -110,36 +110,30 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 158
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Landroid/app/ContextImpl;->sSharedPrefs:Ljava/util/HashMap;
 
-    .line 184
     new-array v0, v1, [Ljava/lang/String;
 
     sput-object v0, Landroid/app/ContextImpl;->EMPTY_FILE_LIST:[Ljava/lang/String;
 
-    .line 249
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Landroid/app/ContextImpl;->SYSTEM_SERVICE_MAP:Ljava/util/HashMap;
 
-    .line 252
     sput v1, Landroid/app/ContextImpl;->sNextPerContextServiceCacheIndex:I
 
-    .line 263
     new-instance v0, Landroid/app/ContextImpl$1;
 
     invoke-direct {v0}, Landroid/app/ContextImpl$1;-><init>()V
 
     sput-object v0, Landroid/app/ContextImpl;->WALLPAPER_FETCHER:Landroid/app/ContextImpl$ServiceFetcher;
 
-    .line 270
     const-string v0, "accessibility"
 
     new-instance v1, Landroid/app/ContextImpl$2;
@@ -148,7 +142,6 @@
 
     invoke-static {v0, v1}, Landroid/app/ContextImpl;->registerService(Ljava/lang/String;Landroid/app/ContextImpl$ServiceFetcher;)V
 
-    .line 275
     const-string v0, "account"
 
     new-instance v1, Landroid/app/ContextImpl$3;
@@ -157,7 +150,6 @@
 
     invoke-static {v0, v1}, Landroid/app/ContextImpl;->registerService(Ljava/lang/String;Landroid/app/ContextImpl$ServiceFetcher;)V
 
-    .line 282
     const-string v0, "activity"
 
     new-instance v1, Landroid/app/ContextImpl$4;
@@ -166,7 +158,6 @@
 
     invoke-static {v0, v1}, Landroid/app/ContextImpl;->registerService(Ljava/lang/String;Landroid/app/ContextImpl$ServiceFetcher;)V
 
-    .line 287
     const-string v0, "alarm"
 
     new-instance v1, Landroid/app/ContextImpl$5;
@@ -175,7 +166,6 @@
 
     invoke-static {v0, v1}, Landroid/app/ContextImpl;->registerService(Ljava/lang/String;Landroid/app/ContextImpl$ServiceFetcher;)V
 
-    .line 294
     const-string v0, "audio"
 
     new-instance v1, Landroid/app/ContextImpl$6;
@@ -184,8 +174,7 @@
 
     invoke-static {v0, v1}, Landroid/app/ContextImpl;->registerService(Ljava/lang/String;Landroid/app/ContextImpl$ServiceFetcher;)V
 
-    .line 299
-    const-string/jumbo v0, "media_router"
+    const-string v0, "media_router"
 
     new-instance v1, Landroid/app/ContextImpl$7;
 
@@ -193,7 +182,6 @@
 
     invoke-static {v0, v1}, Landroid/app/ContextImpl;->registerService(Ljava/lang/String;Landroid/app/ContextImpl$ServiceFetcher;)V
 
-    .line 304
     const-string v0, "clipboard"
 
     new-instance v1, Landroid/app/ContextImpl$8;
@@ -202,7 +190,6 @@
 
     invoke-static {v0, v1}, Landroid/app/ContextImpl;->registerService(Ljava/lang/String;Landroid/app/ContextImpl$ServiceFetcher;)V
 
-    .line 310
     const-string v0, "connectivity"
 
     new-instance v1, Landroid/app/ContextImpl$9;
@@ -211,7 +198,6 @@
 
     invoke-static {v0, v1}, Landroid/app/ContextImpl;->registerService(Ljava/lang/String;Landroid/app/ContextImpl$ServiceFetcher;)V
 
-    .line 316
     const-string v0, "country_detector"
 
     new-instance v1, Landroid/app/ContextImpl$10;
@@ -220,7 +206,6 @@
 
     invoke-static {v0, v1}, Landroid/app/ContextImpl;->registerService(Ljava/lang/String;Landroid/app/ContextImpl$ServiceFetcher;)V
 
-    .line 322
     const-string v0, "device_policy"
 
     new-instance v1, Landroid/app/ContextImpl$11;
@@ -229,7 +214,6 @@
 
     invoke-static {v0, v1}, Landroid/app/ContextImpl;->registerService(Ljava/lang/String;Landroid/app/ContextImpl$ServiceFetcher;)V
 
-    .line 327
     const-string v0, "download"
 
     new-instance v1, Landroid/app/ContextImpl$12;
@@ -238,8 +222,7 @@
 
     invoke-static {v0, v1}, Landroid/app/ContextImpl;->registerService(Ljava/lang/String;Landroid/app/ContextImpl$ServiceFetcher;)V
 
-    .line 332
-    const-string/jumbo v0, "nfc"
+    const-string v0, "nfc"
 
     new-instance v1, Landroid/app/ContextImpl$13;
 
@@ -247,7 +230,6 @@
 
     invoke-static {v0, v1}, Landroid/app/ContextImpl;->registerService(Ljava/lang/String;Landroid/app/ContextImpl$ServiceFetcher;)V
 
-    .line 337
     const-string v0, "dropbox"
 
     new-instance v1, Landroid/app/ContextImpl$14;
@@ -256,7 +238,6 @@
 
     invoke-static {v0, v1}, Landroid/app/ContextImpl;->registerService(Ljava/lang/String;Landroid/app/ContextImpl$ServiceFetcher;)V
 
-    .line 342
     const-string v0, "input"
 
     new-instance v1, Landroid/app/ContextImpl$15;
@@ -265,7 +246,6 @@
 
     invoke-static {v0, v1}, Landroid/app/ContextImpl;->registerService(Ljava/lang/String;Landroid/app/ContextImpl$ServiceFetcher;)V
 
-    .line 347
     const-string v0, "input_method"
 
     new-instance v1, Landroid/app/ContextImpl$16;
@@ -274,8 +254,7 @@
 
     invoke-static {v0, v1}, Landroid/app/ContextImpl;->registerService(Ljava/lang/String;Landroid/app/ContextImpl$ServiceFetcher;)V
 
-    .line 352
-    const-string/jumbo v0, "textservices"
+    const-string v0, "textservices"
 
     new-instance v1, Landroid/app/ContextImpl$17;
 
@@ -283,7 +262,6 @@
 
     invoke-static {v0, v1}, Landroid/app/ContextImpl;->registerService(Ljava/lang/String;Landroid/app/ContextImpl$ServiceFetcher;)V
 
-    .line 357
     const-string v0, "keyguard"
 
     new-instance v1, Landroid/app/ContextImpl$18;
@@ -292,7 +270,6 @@
 
     invoke-static {v0, v1}, Landroid/app/ContextImpl;->registerService(Ljava/lang/String;Landroid/app/ContextImpl$ServiceFetcher;)V
 
-    .line 366
     const-string v0, "layout_inflater"
 
     new-instance v1, Landroid/app/ContextImpl$19;
@@ -301,7 +278,6 @@
 
     invoke-static {v0, v1}, Landroid/app/ContextImpl;->registerService(Ljava/lang/String;Landroid/app/ContextImpl$ServiceFetcher;)V
 
-    .line 371
     const-string v0, "location"
 
     new-instance v1, Landroid/app/ContextImpl$20;
@@ -310,8 +286,7 @@
 
     invoke-static {v0, v1}, Landroid/app/ContextImpl;->registerService(Ljava/lang/String;Landroid/app/ContextImpl$ServiceFetcher;)V
 
-    .line 377
-    const-string/jumbo v0, "netpolicy"
+    const-string v0, "netpolicy"
 
     new-instance v1, Landroid/app/ContextImpl$21;
 
@@ -319,8 +294,7 @@
 
     invoke-static {v0, v1}, Landroid/app/ContextImpl;->registerService(Ljava/lang/String;Landroid/app/ContextImpl$ServiceFetcher;)V
 
-    .line 385
-    const-string/jumbo v0, "notification"
+    const-string v0, "notification"
 
     new-instance v1, Landroid/app/ContextImpl$22;
 
@@ -328,8 +302,7 @@
 
     invoke-static {v0, v1}, Landroid/app/ContextImpl;->registerService(Ljava/lang/String;Landroid/app/ContextImpl$ServiceFetcher;)V
 
-    .line 398
-    const-string/jumbo v0, "servicediscovery"
+    const-string v0, "servicediscovery"
 
     new-instance v1, Landroid/app/ContextImpl$23;
 
@@ -337,8 +310,7 @@
 
     invoke-static {v0, v1}, Landroid/app/ContextImpl;->registerService(Ljava/lang/String;Landroid/app/ContextImpl$ServiceFetcher;)V
 
-    .line 409
-    const-string/jumbo v0, "power"
+    const-string v0, "power"
 
     new-instance v1, Landroid/app/ContextImpl$24;
 
@@ -346,8 +318,7 @@
 
     invoke-static {v0, v1}, Landroid/app/ContextImpl;->registerService(Ljava/lang/String;Landroid/app/ContextImpl$ServiceFetcher;)V
 
-    .line 416
-    const-string/jumbo v0, "search"
+    const-string v0, "search"
 
     new-instance v1, Landroid/app/ContextImpl$25;
 
@@ -355,8 +326,7 @@
 
     invoke-static {v0, v1}, Landroid/app/ContextImpl;->registerService(Ljava/lang/String;Landroid/app/ContextImpl$ServiceFetcher;)V
 
-    .line 422
-    const-string/jumbo v0, "sensor"
+    const-string v0, "sensor"
 
     new-instance v1, Landroid/app/ContextImpl$26;
 
@@ -364,8 +334,7 @@
 
     invoke-static {v0, v1}, Landroid/app/ContextImpl;->registerService(Ljava/lang/String;Landroid/app/ContextImpl$ServiceFetcher;)V
 
-    .line 427
-    const-string/jumbo v0, "statusbar"
+    const-string v0, "statusbar"
 
     new-instance v1, Landroid/app/ContextImpl$27;
 
@@ -373,8 +342,7 @@
 
     invoke-static {v0, v1}, Landroid/app/ContextImpl;->registerService(Ljava/lang/String;Landroid/app/ContextImpl$ServiceFetcher;)V
 
-    .line 432
-    const-string/jumbo v0, "storage"
+    const-string v0, "storage"
 
     new-instance v1, Landroid/app/ContextImpl$28;
 
@@ -382,8 +350,7 @@
 
     invoke-static {v0, v1}, Landroid/app/ContextImpl;->registerService(Ljava/lang/String;Landroid/app/ContextImpl$ServiceFetcher;)V
 
-    .line 442
-    const-string/jumbo v0, "phone"
+    const-string v0, "phone"
 
     new-instance v1, Landroid/app/ContextImpl$29;
 
@@ -391,8 +358,7 @@
 
     invoke-static {v0, v1}, Landroid/app/ContextImpl;->registerService(Ljava/lang/String;Landroid/app/ContextImpl$ServiceFetcher;)V
 
-    .line 447
-    const-string/jumbo v0, "throttle"
+    const-string v0, "throttle"
 
     new-instance v1, Landroid/app/ContextImpl$30;
 
@@ -400,8 +366,7 @@
 
     invoke-static {v0, v1}, Landroid/app/ContextImpl;->registerService(Ljava/lang/String;Landroid/app/ContextImpl$ServiceFetcher;)V
 
-    .line 453
-    const-string/jumbo v0, "uimode"
+    const-string v0, "uimode"
 
     new-instance v1, Landroid/app/ContextImpl$31;
 
@@ -409,8 +374,7 @@
 
     invoke-static {v0, v1}, Landroid/app/ContextImpl;->registerService(Ljava/lang/String;Landroid/app/ContextImpl$ServiceFetcher;)V
 
-    .line 458
-    const-string/jumbo v0, "usb"
+    const-string v0, "usb"
 
     new-instance v1, Landroid/app/ContextImpl$32;
 
@@ -418,8 +382,7 @@
 
     invoke-static {v0, v1}, Landroid/app/ContextImpl;->registerService(Ljava/lang/String;Landroid/app/ContextImpl$ServiceFetcher;)V
 
-    .line 464
-    const-string/jumbo v0, "serial"
+    const-string v0, "serial"
 
     new-instance v1, Landroid/app/ContextImpl$33;
 
@@ -427,8 +390,7 @@
 
     invoke-static {v0, v1}, Landroid/app/ContextImpl;->registerService(Ljava/lang/String;Landroid/app/ContextImpl$ServiceFetcher;)V
 
-    .line 470
-    const-string/jumbo v0, "vibrator"
+    const-string v0, "vibrator"
 
     new-instance v1, Landroid/app/ContextImpl$34;
 
@@ -436,15 +398,13 @@
 
     invoke-static {v0, v1}, Landroid/app/ContextImpl;->registerService(Ljava/lang/String;Landroid/app/ContextImpl$ServiceFetcher;)V
 
-    .line 475
-    const-string/jumbo v0, "wallpaper"
+    const-string v0, "wallpaper"
 
     sget-object v1, Landroid/app/ContextImpl;->WALLPAPER_FETCHER:Landroid/app/ContextImpl$ServiceFetcher;
 
     invoke-static {v0, v1}, Landroid/app/ContextImpl;->registerService(Ljava/lang/String;Landroid/app/ContextImpl$ServiceFetcher;)V
 
-    .line 477
-    const-string/jumbo v0, "wifi"
+    const-string v0, "wifi"
 
     new-instance v1, Landroid/app/ContextImpl$35;
 
@@ -452,8 +412,7 @@
 
     invoke-static {v0, v1}, Landroid/app/ContextImpl;->registerService(Ljava/lang/String;Landroid/app/ContextImpl$ServiceFetcher;)V
 
-    .line 484
-    const-string/jumbo v0, "wifip2p"
+    const-string v0, "wifip2p"
 
     new-instance v1, Landroid/app/ContextImpl$36;
 
@@ -461,8 +420,7 @@
 
     invoke-static {v0, v1}, Landroid/app/ContextImpl;->registerService(Ljava/lang/String;Landroid/app/ContextImpl$ServiceFetcher;)V
 
-    .line 491
-    const-string/jumbo v0, "window"
+    const-string v0, "window"
 
     new-instance v1, Landroid/app/ContextImpl$37;
 
@@ -470,7 +428,6 @@
 
     invoke-static {v0, v1}, Landroid/app/ContextImpl;->registerService(Ljava/lang/String;Landroid/app/ContextImpl$ServiceFetcher;)V
 
-    .line 496
     const-string v0, "fm_receiver"
 
     new-instance v1, Landroid/app/ContextImpl$38;
@@ -479,7 +436,6 @@
 
     invoke-static {v0, v1}, Landroid/app/ContextImpl;->registerService(Ljava/lang/String;Landroid/app/ContextImpl$ServiceFetcher;)V
 
-    .line 503
     const-string v0, "fm_transmitter"
 
     new-instance v1, Landroid/app/ContextImpl$39;
@@ -1157,7 +1113,6 @@
 
     invoke-static {v0, v1}, Landroid/app/ContextImpl;->registerService(Ljava/lang/String;Landroid/app/ContextImpl$ServiceFetcher;)V
 
-    .line 511
     return-void
 .end method
 
@@ -2400,7 +2355,6 @@
     .prologue
     iget-object v0, p0, Landroid/app/ContextImpl;->mActivityToken:Landroid/os/IBinder;
 
-    .line 1560
     return-object v0
 .end method
 
@@ -2540,7 +2494,6 @@
 
     invoke-static {v0, v2, v3, v4}, Landroid/os/FileUtils;->setPermissions(Ljava/lang/String;III)I
 
-    .line 1342
     :cond_2
     monitor-exit v1
     :try_end_0
@@ -2851,7 +2804,6 @@
 
     throw v1
 
-    .line 1470
     :cond_2
     :try_start_3
     new-instance v0, Ljava/io/File;
@@ -3106,12 +3058,10 @@
     .locals 2
 
     .prologue
-    .line 1539
     iget-object v0, p0, Landroid/app/ContextImpl;->mPackageInfo:Landroid/app/LoadedApk;
 
     if-eqz v0, :cond_0
 
-    .line 1540
     iget-object v0, p0, Landroid/app/ContextImpl;->mPackageInfo:Landroid/app/LoadedApk;
 
     invoke-virtual {v0}, Landroid/app/LoadedApk;->getAppDir()Ljava/lang/String;
@@ -3120,7 +3070,6 @@
 
     return-object v0
 
-    .line 1542
     :cond_0
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -3144,7 +3093,6 @@
     :goto_0
     return-object v1
 
-    .line 859
     :cond_0
     invoke-static {}, Landroid/app/ActivityThread;->getPackageManager()Landroid/content/pm/IPackageManager;
 
@@ -3161,7 +3109,6 @@
 
     goto :goto_0
 
-    .line 862
     :cond_1
     const/4 v1, 0x0
 
@@ -4008,7 +3955,6 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1317
     :goto_0
     return-void
 
@@ -4039,7 +3985,6 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1407
     :goto_0
     return-void
 
@@ -4339,7 +4284,6 @@
 
     move-result-object p4
 
-    .line 1512
     :cond_0
     iget-object v0, p0, Landroid/app/ContextImpl;->mPackageInfo:Landroid/app/LoadedApk;
 
@@ -4672,7 +4616,6 @@
     .prologue
     iput-object p1, p0, Landroid/app/ContextImpl;->mActivityToken:Landroid/os/IBinder;
 
-    .line 1368
     return-void
 .end method
 
@@ -4712,7 +4655,6 @@
 
     invoke-virtual {v0, p1}, Landroid/app/WallpaperManager;->setBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 1493
     return-void
 .end method
 
@@ -4744,7 +4686,6 @@
 
     invoke-virtual {p0, p1, v0}, Landroid/app/ContextImpl;->startActivities([Landroid/content/Intent;Landroid/os/Bundle;)V
 
-    .line 1359
     return-void
 .end method
 
@@ -4805,7 +4746,6 @@
 
     invoke-virtual/range {v0 .. v6}, Landroid/app/Instrumentation;->execStartActivities(Landroid/content/Context;Landroid/os/IBinder;Landroid/os/IBinder;Landroid/app/Activity;[Landroid/content/Intent;Landroid/os/Bundle;)V
 
-    .line 1485
     return-void
 .end method
 
@@ -4818,7 +4758,6 @@
 
     invoke-virtual {p0, p1, v0}, Landroid/app/ContextImpl;->startActivity(Landroid/content/Intent;Landroid/os/Bundle;)V
 
-    .line 1351
     return-void
 .end method
 
@@ -4877,7 +4816,6 @@
 
     invoke-virtual/range {v0 .. v7}, Landroid/app/Instrumentation;->execStartActivity(Landroid/content/Context;Landroid/os/IBinder;Landroid/os/IBinder;Landroid/app/Activity;Landroid/content/Intent;ILandroid/os/Bundle;)Landroid/app/Instrumentation$ActivityResult;
 
-    .line 1477
     return-void
 .end method
 
@@ -4959,7 +4897,6 @@
 
     invoke-virtual/range {v0 .. v6}, Landroid/app/ContextImpl;->startIntentSender(Landroid/content/IntentSender;Landroid/content/Intent;IIILandroid/os/Bundle;)V
 
-    .line 1506
     return-void
 .end method
 
@@ -4996,7 +4933,6 @@
 
     move-result-object v4
 
-    .line 608
     :cond_0
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
@@ -5223,7 +5159,6 @@
     :catch_0
     move-exception v0
 
-    .line 767
     :cond_0
     :goto_0
     return v2
@@ -5315,12 +5250,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 794
-    .line 1166
     :goto_0
     return-void
 
-    .line 1164
     .end local v0           #rd:Landroid/content/IIntentReceiver;
     :cond_0
     new-instance v1, Ljava/lang/RuntimeException;
@@ -5331,7 +5263,6 @@
 
     throw v1
 
-    .line 1161
     .restart local v0       #rd:Landroid/content/IIntentReceiver;
     :catch_0
     move-exception v1

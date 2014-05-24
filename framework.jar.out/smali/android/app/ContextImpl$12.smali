@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 327
     invoke-direct {p0}, Landroid/app/ContextImpl$ServiceFetcher;-><init>()V
 
     return-void

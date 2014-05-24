@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 273
     iput-object p1, p0, Landroid/media/AudioService$1;->this$0:Landroid/media/AudioService;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -48,15 +47,12 @@
 
     const/4 v3, 0x0
 
-    .line 275
     sparse-switch p1, :sswitch_data_0
 
-    .line 293
     :cond_0
     :goto_0
     return-void
 
-    .line 277
     :sswitch_0
     iget-object v0, p0, Landroid/media/AudioService$1;->this$0:Landroid/media/AudioService;
 
@@ -67,7 +63,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 278
     iget-object v0, p0, Landroid/media/AudioService$1;->this$0:Landroid/media/AudioService;
 
     #getter for: Landroid/media/AudioService;->mAudioHandler:Landroid/media/AudioService$AudioHandler;
@@ -84,7 +79,6 @@
     #calls: Landroid/media/AudioService;->sendMsg(Landroid/os/Handler;IIIILjava/lang/Object;I)V
     invoke-static/range {v0 .. v6}, Landroid/media/AudioService;->access$200(Landroid/os/Handler;IIIILjava/lang/Object;I)V
 
-    .line 280
     iget-object v0, p0, Landroid/media/AudioService$1;->this$0:Landroid/media/AudioService;
 
     #setter for: Landroid/media/AudioService;->mMediaServerOk:Z
@@ -92,7 +86,6 @@
 
     goto :goto_0
 
-    .line 284
     :sswitch_1
     iget-object v0, p0, Landroid/media/AudioService$1;->this$0:Landroid/media/AudioService;
 
@@ -103,7 +96,6 @@
 
     if-nez v0, :cond_0
 
-    .line 285
     iget-object v0, p0, Landroid/media/AudioService$1;->this$0:Landroid/media/AudioService;
 
     #getter for: Landroid/media/AudioService;->mAudioHandler:Landroid/media/AudioService$AudioHandler;
@@ -120,7 +112,6 @@
     #calls: Landroid/media/AudioService;->sendMsg(Landroid/os/Handler;IIIILjava/lang/Object;I)V
     invoke-static/range {v0 .. v6}, Landroid/media/AudioService;->access$200(Landroid/os/Handler;IIIILjava/lang/Object;I)V
 
-    .line 287
     iget-object v0, p0, Landroid/media/AudioService$1;->this$0:Landroid/media/AudioService;
 
     #setter for: Landroid/media/AudioService;->mMediaServerOk:Z
@@ -128,7 +119,6 @@
 
     goto :goto_0
 
-    .line 275
     :sswitch_data_0
     .sparse-switch
         0x0 -> :sswitch_1

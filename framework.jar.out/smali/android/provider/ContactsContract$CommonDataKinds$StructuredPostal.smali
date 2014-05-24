@@ -53,10 +53,9 @@
     .locals 2
 
     .prologue
-    .line 5792
     sget-object v0, Landroid/provider/ContactsContract$Data;->CONTENT_URI:Landroid/net/Uri;
 
-    const-string/jumbo v1, "postals"
+    const-string v1, "postals"
 
     invoke-static {v0, v1}, Landroid/net/Uri;->withAppendedPath(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 
@@ -71,10 +70,8 @@
     .locals 0
 
     .prologue
-    .line 5775
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5776
     return-void
 .end method
 
@@ -85,7 +82,6 @@
     .parameter "label"
 
     .prologue
-    .line 5884
     if-nez p1, :cond_0
 
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -94,19 +90,16 @@
 
     if-nez v1, :cond_0
 
-    .line 5888
     .end local p2
     :goto_0
     return-object p2
 
-    .line 5887
     .restart local p2
     :cond_0
     invoke-static {p1}, Landroid/provider/ContactsContract$CommonDataKinds$StructuredPostal;->getTypeLabelResource(I)I
 
     move-result v0
 
-    .line 5888
     .local v0, labelRes:I
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
@@ -120,34 +113,28 @@
     .parameter "type"
 
     .prologue
-    .line 5869
     packed-switch p0, :pswitch_data_0
 
-    .line 5873
     const v0, 0x10402c8
 
     :goto_0
     return v0
 
-    .line 5870
     :pswitch_0
     const v0, 0x10402c9
 
     goto :goto_0
 
-    .line 5871
     :pswitch_1
     const v0, 0x10402ca
 
     goto :goto_0
 
-    .line 5872
     :pswitch_2
     const v0, 0x10402cb
 
     goto :goto_0
 
-    .line 5869
     nop
 
     :pswitch_data_0

@@ -20,19 +20,14 @@
     .parameter "mode"
 
     .prologue
-    .line 72
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/cat/CommandParams;-><init>(Lcom/android/internal/telephony/cat/CommandDetails;)V
 
-    .line 73
     iput-object p2, p0, Lcom/android/internal/telephony/cat/LaunchBrowserParams;->confirmMsg:Lcom/android/internal/telephony/cat/TextMessage;
 
-    .line 74
     iput-object p4, p0, Lcom/android/internal/telephony/cat/LaunchBrowserParams;->mode:Lcom/android/internal/telephony/cat/LaunchBrowserMode;
 
-    .line 75
     iput-object p3, p0, Lcom/android/internal/telephony/cat/LaunchBrowserParams;->url:Ljava/lang/String;
 
-    .line 76
     return-void
 .end method
 
@@ -45,30 +40,24 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 79
     iget-object v1, p0, Lcom/android/internal/telephony/cat/LaunchBrowserParams;->confirmMsg:Lcom/android/internal/telephony/cat/TextMessage;
 
     if-eqz v1, :cond_1
 
-    .line 80
     if-eqz p1, :cond_0
 
-    .line 81
     iget-object v1, p0, Lcom/android/internal/telephony/cat/LaunchBrowserParams;->confirmMsg:Lcom/android/internal/telephony/cat/TextMessage;
 
     iput-object p1, v1, Lcom/android/internal/telephony/cat/TextMessage;->icon:Landroid/graphics/Bitmap;
 
-    .line 87
     :goto_0
     return v0
 
-    .line 84
     :cond_0
     iget-object v1, p0, Lcom/android/internal/telephony/cat/LaunchBrowserParams;->confirmMsg:Lcom/android/internal/telephony/cat/TextMessage;
 
     iput-boolean v0, v1, Lcom/android/internal/telephony/cat/TextMessage;->iconLoadingFailed:Z
 
-    .line 87
     :cond_1
     const/4 v0, 0x0
 

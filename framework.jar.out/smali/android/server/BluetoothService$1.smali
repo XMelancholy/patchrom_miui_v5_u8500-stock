@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 539
     iput-object p1, p0, Landroid/server/BluetoothService$1;->this$0:Landroid/server/BluetoothService;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -39,27 +38,22 @@
     .parameter "msg"
 
     .prologue
-    .line 542
     iget v3, p1, Landroid/os/Message;->what:I
 
     packed-switch v3, :pswitch_data_0
 
-    .line 564
     :cond_0
     :goto_0
     return-void
 
-    .line 544
     :pswitch_0
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/String;
 
-    .line 545
     .local v0, address:Ljava/lang/String;
     if-eqz v0, :cond_0
 
-    .line 546
     iget-object v3, p0, Landroid/server/BluetoothService$1;->this$0:Landroid/server/BluetoothService;
 
     #getter for: Landroid/server/BluetoothService;->mBondState:Landroid/server/BluetoothBondState;
@@ -71,7 +65,6 @@
 
     move-result v1
 
-    .line 552
     .local v1, attempt:I
     if-lez v1, :cond_1
 
@@ -79,7 +72,6 @@
 
     if-gt v1, v3, :cond_1
 
-    .line 553
     iget-object v3, p0, Landroid/server/BluetoothService$1;->this$0:Landroid/server/BluetoothService;
 
     #getter for: Landroid/server/BluetoothService;->mBondState:Landroid/server/BluetoothBondState;
@@ -89,14 +81,12 @@
 
     invoke-virtual {v3, v0}, Landroid/server/BluetoothBondState;->attempt(Ljava/lang/String;)V
 
-    .line 554
     iget-object v3, p0, Landroid/server/BluetoothService$1;->this$0:Landroid/server/BluetoothService;
 
     invoke-virtual {v3, v0}, Landroid/server/BluetoothService;->createBond(Ljava/lang/String;)Z
 
     goto :goto_0
 
-    .line 557
     :cond_1
     if-lez v1, :cond_0
 
@@ -111,7 +101,6 @@
 
     goto :goto_0
 
-    .line 560
     .end local v0           #address:Ljava/lang/String;
     .end local v1           #attempt:I
     :pswitch_1
@@ -119,7 +108,6 @@
 
     check-cast v2, Landroid/util/Pair;
 
-    .line 561
     .local v2, pair:Landroid/util/Pair;,"Landroid/util/Pair<Ljava/lang/Integer;Ljava/lang/Integer;>;"
     iget-object v4, p0, Landroid/server/BluetoothService$1;->this$0:Landroid/server/BluetoothService;
 
@@ -144,7 +132,6 @@
 
     goto :goto_0
 
-    .line 542
     :pswitch_data_0
     .packed-switch 0x2
         :pswitch_0

@@ -30,7 +30,6 @@
     .parameter
 
     .prologue
-    .line 732
     iput-object p1, p0, Landroid/webkit/CallbackProxy$9;->this$0:Landroid/webkit/CallbackProxy;
 
     iput-object p2, p0, Landroid/webkit/CallbackProxy$9;->val$res:Landroid/webkit/JsResult;
@@ -48,11 +47,9 @@
     .parameter "which"
 
     .prologue
-    .line 736
     iget-object v0, p0, Landroid/webkit/CallbackProxy$9;->val$res:Landroid/webkit/JsResult;
 
     invoke-virtual {v0}, Landroid/webkit/JsResult;->cancel()V
 
-    .line 737
     return-void
 .end method

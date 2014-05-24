@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 3590
     iput-object p1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$14;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -42,7 +41,6 @@
     .prologue
     const/4 v3, 0x7
 
-    .line 3592
     const-string v1, "com.gk.ACTION_GK_ORIENTATION_LOCKED"
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -55,7 +53,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 3593
     const-string v1, "orientation_locked"
 
     const/4 v2, 0x1
@@ -64,22 +61,18 @@
 
     move-result v0
 
-    .line 3595
     .local v0, orientation_locked:I
     iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$14;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     invoke-virtual {v1, v3}, Lcom/android/internal/policy/impl/PhoneWindowManager;->setCurrentOrientationLw(I)V
 
-    .line 3596
     packed-switch v0, :pswitch_data_0
 
-    .line 3609
     .end local v0           #orientation_locked:I
     :cond_0
     :goto_0
     return-void
 
-    .line 3598
     .restart local v0       #orientation_locked:I
     :pswitch_0
     iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$14;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
@@ -88,7 +81,6 @@
 
     goto :goto_0
 
-    .line 3601
     :pswitch_1
     iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$14;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
@@ -98,7 +90,6 @@
 
     goto :goto_0
 
-    .line 3604
     :pswitch_2
     iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$14;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
@@ -108,7 +99,6 @@
 
     goto :goto_0
 
-    .line 3596
     nop
 
     :pswitch_data_0

@@ -27,7 +27,6 @@
     .locals 3
 
     .prologue
-    .line 811
     invoke-static {}, Lcom/android/internal/telephony/cat/ResultCode;->values()[Lcom/android/internal/telephony/cat/ResultCode;
 
     move-result-object v0
@@ -277,7 +276,6 @@
     :try_end_e
     .catch Ljava/lang/NoSuchFieldError; {:try_start_e .. :try_end_e} :catch_16
 
-    .line 451
     :goto_e
     invoke-static {}, Lcom/android/internal/telephony/cat/Duration$TimeUnit;->values()[Lcom/android/internal/telephony/cat/Duration$TimeUnit;
 
@@ -336,7 +334,6 @@
     :try_end_11
     .catch Ljava/lang/NoSuchFieldError; {:try_start_11 .. :try_end_11} :catch_13
 
-    .line 223
     :goto_11
     invoke-static {}, Lcom/android/internal/telephony/cat/AppInterface$CommandType;->values()[Lcom/android/internal/telephony/cat/AppInterface$CommandType;
 
@@ -749,7 +746,6 @@
 
     goto/16 :goto_12
 
-    .line 451
     :catch_13
     move-exception v0
 
@@ -765,7 +761,6 @@
 
     goto/16 :goto_f
 
-    .line 811
     :catch_16
     move-exception v0
 

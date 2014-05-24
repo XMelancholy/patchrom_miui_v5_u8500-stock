@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 229
     iput-object p1, p0, Landroid/webkit/HTML5VideoFullScreen$3;->this$0:Landroid/webkit/HTML5VideoFullScreen;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -84,14 +83,11 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->removeView(Landroid/view/View;)V
 
-    .line 240
     invoke-static {v2}, Landroid/webkit/HTML5VideoFullScreen;->access$902(Landroid/view/View;)Landroid/view/View;
 
-    .line 242
     :cond_0
     invoke-static {v2}, Landroid/webkit/HTML5VideoFullScreen;->access$802(Landroid/widget/FrameLayout;)Landroid/widget/FrameLayout;
 
-    .line 244
     iget-object v0, p0, Landroid/webkit/HTML5VideoFullScreen$3;->this$0:Landroid/webkit/HTML5VideoFullScreen;
 
     iget-object v0, v0, Landroid/webkit/HTML5VideoView;->mProxy:Landroid/webkit/HTML5VideoViewProxy;

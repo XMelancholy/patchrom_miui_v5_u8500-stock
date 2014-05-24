@@ -16,13 +16,10 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 54
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 56
     iput-boolean v0, p0, Lcom/android/server/pm/SteModemShutdownSync;->useFallback:Z
 
-    .line 58
     iput-boolean v0, p0, Lcom/android/server/pm/SteModemShutdownSync;->isRadioOn:Z
 
     return-void
