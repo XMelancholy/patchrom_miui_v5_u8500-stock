@@ -234,10 +234,19 @@
 .end method
 
 .method public constructor <init>()V
-    .locals 0
+    .locals 1
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->CHANGE_CODE:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
 
     .prologue
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Lmiui/content/res/ExtraConfiguration;
+
+    invoke-direct {v0}, Lmiui/content/res/ExtraConfiguration;-><init>()V
+
+    iput-object v0, p0, Landroid/content/res/Configuration;->extraConfig:Lmiui/content/res/ExtraConfiguration;
 
     invoke-virtual {p0}, Landroid/content/res/Configuration;->setToDefaults()V
 
@@ -245,11 +254,20 @@
 .end method
 
 .method public constructor <init>(Landroid/content/res/Configuration;)V
-    .locals 0
+    .locals 1
     .parameter "o"
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->CHANGE_CODE:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
 
     .prologue
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Lmiui/content/res/ExtraConfiguration;
+
+    invoke-direct {v0}, Lmiui/content/res/ExtraConfiguration;-><init>()V
+
+    iput-object v0, p0, Landroid/content/res/Configuration;->extraConfig:Lmiui/content/res/ExtraConfiguration;
 
     invoke-virtual {p0, p1}, Landroid/content/res/Configuration;->setTo(Landroid/content/res/Configuration;)V
 
@@ -257,11 +275,20 @@
 .end method
 
 .method private constructor <init>(Landroid/os/Parcel;)V
-    .locals 0
+    .locals 1
     .parameter "source"
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->CHANGE_CODE:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
 
     .prologue
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Lmiui/content/res/ExtraConfiguration;
+
+    invoke-direct {v0}, Lmiui/content/res/ExtraConfiguration;-><init>()V
+
+    iput-object v0, p0, Landroid/content/res/Configuration;->extraConfig:Lmiui/content/res/ExtraConfiguration;
 
     invoke-virtual {p0, p1}, Landroid/content/res/Configuration;->readFromParcel(Landroid/os/Parcel;)V
 

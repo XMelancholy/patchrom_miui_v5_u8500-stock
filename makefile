@@ -41,5 +41,5 @@ include $(PORT_BUILD)/porting.mk
 # To define any local-target
 local-zip-misc:
 	# fix QHDPI
-	cp other/theme/default/* $(ZIP_DIR)/system/media/theme/default
+	#cp other/theme/default/* $(ZIP_DIR)/system/media/theme/default
 	cp other/build.prop $(ZIP_DIR)/system/build.prop

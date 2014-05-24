@@ -46,10 +46,14 @@
 .end method
 
 .method public constructor <init>()V
-    .locals 0
+    .locals 1
 
     .prologue
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Landroid/content/pm/PackageInfoLite;->versionCode:I
 
     return-void
 .end method

@@ -113,6 +113,9 @@
 
 .method public run()V
     .locals 117
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->CHANGE_CODE:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
 
     .prologue
     const/16 v3, 0xbc2
@@ -514,11 +517,11 @@
 
     invoke-static {v3, v9}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    new-instance v72, Lcom/android/server/LightsService;
+    new-instance v72, Lcom/android/server/MiuiLightsService;
 
     move-object/from16 v0, v72
 
-    invoke-direct {v0, v4}, Lcom/android/server/LightsService;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v4}, Lcom/android/server/MiuiLightsService;-><init>(Landroid/content/Context;)V
     :try_end_5
     .catch Ljava/lang/RuntimeException; {:try_start_5 .. :try_end_5} :catch_1
 
@@ -1371,6 +1374,8 @@
     invoke-direct {v9, v4}, Lcom/android/server/DeviceStorageMonitorService;-><init>(Landroid/content/Context;)V
 
     invoke-static {v3, v9}, Landroid/os/ServiceManager;->addService(Ljava/lang/String;Landroid/os/IBinder;)V
+
+    invoke-static {}, Lcom/android/server/ServerThread$Injector;->setMemoryLowThresholdProperty()V
     :try_end_2e
     .catch Ljava/lang/Throwable; {:try_start_2e .. :try_end_2e} :catch_19
 
@@ -1625,6 +1630,13 @@
     .end local v106           #usb:Lcom/android/server/usb/UsbService;
     .restart local v105       #usb:Lcom/android/server/usb/UsbService;
     :goto_2c
+    const-string v3, "security"
+
+    new-instance v9, Lcom/miui/server/SecurityManagerService;
+
+    invoke-direct {v9, v4}, Lcom/miui/server/SecurityManagerService;-><init>(Landroid/content/Context;)V
+
+    invoke-static {v3, v9}, Landroid/os/ServiceManager;->addService(Ljava/lang/String;Landroid/os/IBinder;)V
     :try_start_3c
     const-string v3, "SystemServer"
 

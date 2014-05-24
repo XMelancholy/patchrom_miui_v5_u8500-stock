@@ -206,7 +206,7 @@
     invoke-direct {v2, p0}, Landroid/app/ProgressDialog;-><init>(Landroid/content/Context;)V
 
     .local v2, pd:Landroid/app/ProgressDialog;
-    const v3, 0x104012a
+    const v3, 0x60c0026
 
     invoke-virtual {p0, v3}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -214,7 +214,7 @@
 
     invoke-virtual {v2, v3}, Landroid/app/ProgressDialog;->setTitle(Ljava/lang/CharSequence;)V
 
-    const v3, 0x104012e
+    const v3, 0x60c002c
 
     invoke-virtual {p0, v3}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -234,17 +234,15 @@
 
     invoke-virtual {v3, v4}, Landroid/view/Window;->setType(I)V
 
-    const-string v3, "ctl.start"
+ 
+    invoke-static {p0}, Lcom/android/server/pm/ShutdownThread$Injector;->createShutDownDialog(Landroid/content/Context;)V
 
-    const-string v4, "shutdownanim"
-
-    invoke-static {v3, v4}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
-
-    sget-object v3, Lcom/android/server/pm/ShutdownThread;->sInstance:Lcom/android/server/pm/ShutdownThread;
+    sget-object v4, Lcom/android/server/pm/ShutdownThread;->sInstance:Lcom/android/server/pm/ShutdownThread;
 
     iput-object p0, v3, Lcom/android/server/pm/ShutdownThread;->mContext:Landroid/content/Context;
 
-    sget-object v4, Lcom/android/server/pm/ShutdownThread;->sInstance:Lcom/android/server/pm/ShutdownThread;
+
+    sget-object v3, Lcom/android/server/pm/ShutdownThread;->sInstance:Lcom/android/server/pm/ShutdownThread;
 
     const-string v3, "power"
 
