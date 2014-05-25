@@ -322,8 +322,6 @@ system/etc/firmware/wsm_22.bin 0 0 644
 system/etc/firmware/wsm_5011.bin 0 0 644
 system/etc/hosts 0 0 644
 system/etc/init_bd_addr.sh 0 0 644
-system/etc/init.d 0 0 755
-system/etc/init.d/placeholder 0 0 644
 system/etc/init.goldfish.sh 0 2000 550
 system/etc/iproute2 0 0 755
 system/etc/iproute2/rt_tables 0 0 644

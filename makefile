@@ -9,7 +9,7 @@ local-zip-file     := stockrom.zip
 local-out-zip-file := MIUI_v5_Bambook_u8500.zip
 
 # All apps from original ZIP, but has smali files chanded
-local-modified-apps :=
+local-modified-apps := 
 
 # All apks from MIUI execept MIUISystemUI and framework-miui-res.apk
 local-miui-apps     := 
@@ -20,7 +20,7 @@ local-remove-apps   :=
 # DPI
 local-density := HDPI
 
-local-miui-removed-apps :=  
+local-miui-removed-apps := Gallery2
 
 local-miui-modified-apps := 
 
@@ -41,5 +41,5 @@ include $(PORT_BUILD)/porting.mk
 # To define any local-target
 local-zip-misc:
 	# fix QHDPI
-	#cp other/theme/default/* $(ZIP_DIR)/system/media/theme/default
+	cp other/theme/default/* $(ZIP_DIR)/system/media/theme/default
 	cp other/build.prop $(ZIP_DIR)/system/build.prop

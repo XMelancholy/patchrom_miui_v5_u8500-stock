@@ -677,7 +677,7 @@
     goto :goto_0
 .end method
 
-.method private setLong(Ljava/lang/String;J)V
+.method protected setLong(Ljava/lang/String;J)V
     .locals 5
     .parameter "secureSettingKey"
     .parameter "value"
