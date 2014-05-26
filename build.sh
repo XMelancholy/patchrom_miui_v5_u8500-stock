@@ -25,6 +25,29 @@ if [[ $# = 1 ]]; then
 			rm stockrom/boot.img;
 			mv boot.img stockrom/;
 		;;
+		bb)
+
+			if [ -e out/Miui_V5_Bambook_u8500_$(date +%Y%m%d) ]; then
+				./kernel/tools/mkbootfs ./kernel/ramdisk > ./ramdisk.cpio;
+				cat ramdisk.cpio | gzip > ramdisk.img;
+				./kernel/tools/mkbootimg --kernel ./kernel/zImage --ramdisk ./ramdisk.img --cmdline "" --base 0x0 --pagesize 2048 --ramdisk_offset 0x02000000 -o boot.img;
+				rm ramdisk.cpio ramdisk.img;
+				mv out/Miui_V5_Bambook_u8500_$(date +%Y%m%d).zip ./rom.zip;
+				zip -d rom.zip boot.img;
+				zip -m rom.zip boot.img;
+				mv rom.zip out/Miui_V5_Bambook_u8500_$(date +%Y%m%d).zip;
+			else
+				make fullota;
+				mv out/fullota.zip ./rom.zip;
+				./kernel/tools/mkbootfs ./kernel/ramdisk > ./ramdisk.cpio;
+				cat ramdisk.cpio | gzip > ramdisk.img;
+				./kernel/tools/mkbootimg --kernel ./kernel/zImage --ramdisk ./ramdisk.img --cmdline "" --base 0x0 --pagesize 2048 --ramdisk_offset 0x02000000 -o boot.img;
+				rm ramdisk.cpio ramdisk.img;
+				zip -d rom.zip boot.img;
+				zip -m rom.zip boot.img;
+				mv rom.zip out/Miui_V5_Bambook_u8500_$(date +%Y%m%d).zip;
+			fi
+		;;
 		c)
 			make clean;
 		;;
