@@ -20,7 +20,7 @@ local-remove-apps   :=
 # DPI
 local-density := HDPI
 
-local-miui-removed-apps := Gallery2
+local-miui-removed-apps := MiuiGallery
 
 local-miui-modified-apps := 
 
